@@ -4,9 +4,10 @@ Task: `Task Switching Task`
 
 | Condition | Implemented Stimulus IDs | Source Paper ID | Evidence (quote/figure/table) | Implementation Mode | Notes |
 |---|---|---|---|---|---|
-| `repeat` | `repeat_cue`, `repeat_target` | `W2100359507` | Methods section describes condition-specific cue-target structure and response phase. | `psychopy_builtin` | Cue label text for REPEAT; target token for condition-specific response context. |
-| `switch` | `switch_cue`, `switch_target` | `W2100359507` | Methods section describes condition-specific cue-target structure and response phase. | `psychopy_builtin` | Cue label text for SWITCH; target token for condition-specific response context. |
-| `mixed` | `mixed_cue`, `mixed_target` | `W2100359507` | Methods section describes condition-specific cue-target structure and response phase. | `psychopy_builtin` | Cue label text for MIXED; target token for condition-specific response context. |
+| `repeat` | `repeat_cue`, `repeat_target`, `repeat_hit_feedback`, `repeat_miss_feedback`, `fixation` | `W2134305330` | Condition-specific trial flow and outcome/response mapping described in selected paradigm references. | `psychopy_builtin` | Condition row resolved against current `config/config.yaml` stimuli and `src/run_trial.py` phase logic. |
+| `switch` | `switch_cue`, `switch_target`, `switch_hit_feedback`, `switch_miss_feedback`, `fixation` | `W2134305330` | Condition-specific trial flow and outcome/response mapping described in selected paradigm references. | `psychopy_builtin` | Condition row resolved against current `config/config.yaml` stimuli and `src/run_trial.py` phase logic. |
+| `mixed` | `mixed_cue`, `mixed_target`, `mixed_hit_feedback`, `mixed_miss_feedback`, `fixation` | `W2134305330` | Condition-specific trial flow and outcome/response mapping described in selected paradigm references. | `psychopy_builtin` | Condition row resolved against current `config/config.yaml` stimuli and `src/run_trial.py` phase logic. |
+| `all_conditions` | `instruction_text`, `block_break`, `good_bye`, `fixation` | `W2134305330` | Shared instruction, transition, and fixation assets support the common task envelope across all conditions. | `psychopy_builtin` | Shared assets are condition-agnostic and used in every run mode. |
 
 Implementation mode legend:
 - `psychopy_builtin`: stimulus rendered via PsychoPy primitives in config.
