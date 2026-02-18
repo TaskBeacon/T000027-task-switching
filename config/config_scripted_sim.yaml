@@ -1,0 +1,234 @@
+subinfo_fields:
+- name: subject_id
+  type: int
+  constraints:
+    min: 101
+    max: 999
+    digits: 3
+subinfo_mapping:
+  subject_id: 被试编号（3位）
+  Participant Information: 被试信息
+  registration_failed: 注册失败
+  registration_successful: 注册成功
+  invalid_input: '{field} 输入无效'
+window:
+  size:
+  - 1280
+  - 720
+  units: pix
+  screen: 0
+  bg_color: gray
+  fullscreen: false
+  monitor_width_cm: 35.5
+  monitor_distance_cm: 60
+task:
+  task_name: task_switching
+  save_path: ./outputs/sim
+  total_blocks: 1
+  total_trials: 9
+  trial_per_block: 9
+  conditions:
+  - repeat
+  - switch
+  - mixed
+  key_list:
+  - f
+  - j
+  - space
+  seed_mode: same_across_sub
+  delta: 1
+  language: Chinese
+  voice_name: zh-CN-YunyangNeural
+  voice_enabled: false
+timing:
+  cue_duration: 0.5
+  anticipation_duration: 1.0
+  prefeedback_duration: 0.4
+  feedback_duration: 0.8
+stimuli:
+  fixation:
+    type: text
+    text: +
+    color: white
+    height: 48
+    font: SimHei
+  instruction_text:
+    type: text
+    text: '任务切换任务
+
+
+      每轮先出现规则线索，再出现待分类刺激。
+
+      请根据当前规则作答：F=左侧类别，J=右侧类别。
+
+
+      按空格键开始。'
+    color: white
+    height: 28
+    wrapWidth: 980
+    font: SimHei
+  repeat_cue:
+    type: text
+    text: 线索：重复规则
+    color: green
+    height: 44
+    wrapWidth: 900
+    font: SimHei
+  switch_cue:
+    type: text
+    text: 线索：切换规则
+    color: red
+    height: 44
+    wrapWidth: 900
+    font: SimHei
+  mixed_cue:
+    type: text
+    text: 线索：混合规则
+    color: yellow
+    height: 44
+    wrapWidth: 900
+    font: SimHei
+  repeat_target:
+    type: text
+    text: '请按当前规则分类
+
+      F=左侧类别   J=右侧类别'
+    color: white
+    height: 54
+    wrapWidth: 900
+    font: SimHei
+  switch_target:
+    type: text
+    text: '请按当前规则分类
+
+      F=左侧类别   J=右侧类别'
+    color: white
+    height: 54
+    wrapWidth: 900
+    font: SimHei
+  mixed_target:
+    type: text
+    text: '请按当前规则分类
+
+      F=左侧类别   J=右侧类别'
+    color: white
+    height: 54
+    wrapWidth: 900
+    font: SimHei
+  repeat_hit_feedback:
+    type: text
+    text: 反应已记录
+    color: green
+    height: 42
+    font: SimHei
+  repeat_miss_feedback:
+    type: text
+    text: 未在时限内作答
+    color: red
+    height: 42
+    font: SimHei
+  switch_hit_feedback:
+    type: text
+    text: 反应已记录
+    color: green
+    height: 42
+    font: SimHei
+  switch_miss_feedback:
+    type: text
+    text: 未在时限内作答
+    color: red
+    height: 42
+    font: SimHei
+  mixed_hit_feedback:
+    type: text
+    text: 反应已记录
+    color: green
+    height: 42
+    font: SimHei
+  mixed_miss_feedback:
+    type: text
+    text: 未在时限内作答
+    color: red
+    height: 42
+    font: SimHei
+  block_break:
+    type: text
+    text: '区块 {block_num}/{total_blocks}
+
+      记录率：{accuracy:.2%}
+
+      当前分数：{total_score}
+
+
+      按空格键继续'
+    color: white
+    height: 24
+    wrapWidth: 900
+    font: SimHei
+  good_bye:
+    type: text
+    text: '任务结束，最终分数：{total_score}
+
+
+      按空格键退出'
+    color: white
+    height: 28
+    wrapWidth: 900
+    font: SimHei
+triggers:
+  map:
+    exp_onset: 1
+    exp_end: 2
+    block_onset: 10
+    block_end: 11
+    repeat_cue_onset: 20
+    switch_cue_onset: 21
+    mixed_cue_onset: 22
+    repeat_anti_onset: 30
+    switch_anti_onset: 31
+    mixed_anti_onset: 32
+    repeat_target_onset: 40
+    switch_target_onset: 41
+    mixed_target_onset: 42
+    repeat_key_press: 50
+    switch_key_press: 51
+    mixed_key_press: 52
+    repeat_no_response: 60
+    switch_no_response: 61
+    mixed_no_response: 62
+    repeat_hit_fb_onset: 70
+    repeat_miss_fb_onset: 71
+    switch_hit_fb_onset: 72
+    switch_miss_fb_onset: 73
+    mixed_hit_fb_onset: 74
+    mixed_miss_fb_onset: 75
+  driver:
+    type: serial_url
+    url: loop://
+    baudrate: 115200
+  timing:
+    post_delay_ms: 1
+  policy:
+    strict: false
+controller:
+  initial_duration: 0.25
+  min_duration: 0.08
+  max_duration: 0.4
+  step: 0.02
+  target_accuracy: 0.66
+  condition_specific: true
+  enable_logging: true
+sim:
+  output_dir: outputs/sim
+  seed: 0
+  participant_id: sim001
+  session_id: sub-sim001_task-task_switching_seed0
+  log_path: outputs/sim/sub-sim001_task-task_switching_seed0_sim_events.jsonl
+  policy: warn
+  default_rt_s: 0.2
+  clamp_rt: false
+  responder:
+    type: scripted
+    kwargs:
+      key: f
+      rt_s: 0.25

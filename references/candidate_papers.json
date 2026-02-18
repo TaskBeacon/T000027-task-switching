@@ -1,0 +1,2755 @@
+[
+  {
+    "id": "W3140854437",
+    "title": "Review of deep learning: concepts, CNN architectures, challenges, applications, future directions",
+    "authors": [
+      "Laith Alzubaidi",
+      "Jinglan Zhang",
+      "Amjad J. Humaidi",
+      "Ayad Q. Al-Dujaili",
+      "Ye Duan",
+      "Omran Al-Shamma",
+      "Jos\u00e9 Santamar\u00eda",
+      "Mohammed A. Fadhel",
+      "Muthana Al\u2010Amidie",
+      "Laith Farhan"
+    ],
+    "year": 2021,
+    "journal": "Journal Of Big Data",
+    "doi_or_url": "https://doi.org/10.1186/s40537-021-00444-8",
+    "citation_count": 6954,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3197233987",
+    "title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "authors": [
+      "Frank L.J. Visseren",
+      "Fran\u00e7ois Mach",
+      "Yvo M. Smulders",
+      "David Carballo",
+      "Konstantinos C. Koskinas",
+      "Maria B\u00e4ck",
+      "Athanase B\u00e9n\u00e9tos",
+      "Alessandro Biffi",
+      "Jos\u00e9-Manuel Boavida",
+      "Davide Capodanno",
+      "Bernard Cosyns",
+      "Carolyn Crawford"
+    ],
+    "year": 2021,
+    "journal": "European Heart Journal",
+    "doi_or_url": "https://doi.org/10.1093/eurheartj/ehab484",
+    "citation_count": 5751,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2119046642",
+    "title": "Internet of things: Vision, applications and research challenges",
+    "authors": [
+      "Daniele Miorandi",
+      "Sabrina Sicari",
+      "Francesco De Pellegrini",
+      "Imrich Chlamtac"
+    ],
+    "year": 2012,
+    "journal": "Ad Hoc Networks",
+    "doi_or_url": "https://doi.org/10.1016/j.adhoc.2012.02.016",
+    "citation_count": 3515,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2894993577",
+    "title": "Management of Hyperglycemia in Type 2 Diabetes, 2018. A Consensus Report by the American Diabetes Association (ADA) and the European Association for the Study of Diabetes (EASD)",
+    "authors": [
+      "Melanie J. Davies",
+      "David A. D\u2019Alessio",
+      "Judith Fradkin",
+      "Walter N. Kernan",
+      "Chantal Mathieu",
+      "Geltrude Mingrone",
+      "Peter Rossing",
+      "\u0391\u03c0\u03cc\u03c3\u03c4\u03bf\u03bb\u03bf\u03c2 \u03a4\u03c3\u03ac\u03c0\u03b1\u03c2",
+      "Deborah J. Wexler",
+      "John B. Buse"
+    ],
+    "year": 2018,
+    "journal": "Diabetes Care",
+    "doi_or_url": "https://doi.org/10.2337/dci18-0033",
+    "citation_count": 3421,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2099019320",
+    "title": "A survey of socially interactive robots",
+    "authors": [
+      "Terrence Fong",
+      "Illah Nourbakhsh",
+      "Kerstin Dautenhahn"
+    ],
+    "year": 2003,
+    "journal": "Robotics and Autonomous Systems",
+    "doi_or_url": "https://doi.org/10.1016/s0921-8890(02)00372-x",
+    "citation_count": 3054,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1943579973",
+    "title": "The Internet of Things for Health Care: A Comprehensive Survey",
+    "authors": [
+      "S. M. Riazul Islam",
+      "Daehan Kwak",
+      "Md. Humaun Kabir",
+      "Mahmud Hossain",
+      "Kyung Sup Kwak"
+    ],
+    "year": 2015,
+    "journal": "IEEE Access",
+    "doi_or_url": "https://doi.org/10.1109/access.2015.2437951",
+    "citation_count": 2922,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1662133657",
+    "title": "From Frequency to Meaning: Vector Space Models of Semantics",
+    "authors": [
+      "Peter D. Turney",
+      "Patrick Pantel"
+    ],
+    "year": 2010,
+    "journal": "Journal of Artificial Intelligence Research",
+    "doi_or_url": "https://doi.org/10.1613/jair.2934",
+    "citation_count": 2840,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3123015728",
+    "title": "The Gender Wage Gap: Extent, Trends, and Explanations",
+    "authors": [
+      "Francine D. Blau",
+      "Lawrence M. Kahn"
+    ],
+    "year": 2017,
+    "journal": "Journal of Economic Literature",
+    "doi_or_url": "https://doi.org/10.1257/jel.20160995",
+    "citation_count": 2747,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3194620979",
+    "title": "Integrated Sensing and Communications: Toward Dual-Functional Wireless Networks for 6G and Beyond",
+    "authors": [
+      "Fan Liu",
+      "Yuanhao Cui",
+      "Christos Masouros",
+      "Jie Xu",
+      "Tony Xiao Han",
+      "Yonina C. Eldar",
+      "Stefano Buzzi"
+    ],
+    "year": 2022,
+    "journal": "IEEE Journal on Selected Areas in Communications",
+    "doi_or_url": "https://doi.org/10.1109/jsac.2022.3156632",
+    "citation_count": 2647,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2000196122",
+    "title": "The myth of language universals: Language diversity and its importance for cognitive science",
+    "authors": [
+      "Nicholas Evans",
+      "Stephen C. Levinson"
+    ],
+    "year": 2009,
+    "journal": "Behavioral and Brain Sciences",
+    "doi_or_url": "https://doi.org/10.1017/s0140525x0999094x",
+    "citation_count": 2597,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2128145324",
+    "title": "A Survey of 5G Network: Architecture and Emerging Technologies",
+    "authors": [
+      "Akhil Gupta",
+      "Rakesh Kumar Jha"
+    ],
+    "year": 2015,
+    "journal": "IEEE Access",
+    "doi_or_url": "https://doi.org/10.1109/access.2015.2461602",
+    "citation_count": 2364,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2123431441",
+    "title": "New Public Management Is Dead--Long Live Digital-Era Governance",
+    "authors": [
+      "Patrick Dunleavy"
+    ],
+    "year": 2005,
+    "journal": "Journal of Public Administration Research and Theory",
+    "doi_or_url": "https://doi.org/10.1093/jopart/mui057",
+    "citation_count": 2360,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2955897898",
+    "title": "Wireless Communications and Applications Above 100 GHz: Opportunities and Challenges for 6G and Beyond",
+    "authors": [
+      "Theodore S. Rappaport",
+      "Yunchou Xing",
+      "Ojas Kanhere",
+      "Shihao Ju",
+      "Arjuna Madanayake",
+      "Soumyajit Mandal",
+      "Ahmed Alkhateeb",
+      "Georgios C. Trichopoulos"
+    ],
+    "year": 2019,
+    "journal": "IEEE Access",
+    "doi_or_url": "https://doi.org/10.1109/access.2019.2921522",
+    "citation_count": 2309,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W572002688",
+    "title": "Subject pool recruitment procedures: organizing experiments with ORSEE",
+    "authors": [
+      "Ben Greiner"
+    ],
+    "year": 2015,
+    "journal": "Journal of the Economic Science Association",
+    "doi_or_url": "https://doi.org/10.1007/s40881-015-0004-4",
+    "citation_count": 2282,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2104834906",
+    "title": "What Do We Learn from the Weather? The New Climate-Economy Literature",
+    "authors": [
+      "Melissa Dell",
+      "Benjamin F. Jones",
+      "Benjamin Olken"
+    ],
+    "year": 2014,
+    "journal": "Journal of Economic Literature",
+    "doi_or_url": "https://doi.org/10.1257/jel.52.3.740",
+    "citation_count": 2106,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W4213147678",
+    "title": "Unmanned Aerial Vehicles (UAVs): A Survey on Civil Applications and Key Research Challenges",
+    "authors": [
+      "Hazim Shakhatreh",
+      "Ahmad Sawalmeh",
+      "Ala Al\u2010Fuqaha",
+      "Zuochao Dou",
+      "Eyad Almaita",
+      "Issa Khalil",
+      "Noor Shamsiah Othman",
+      "Abdallah Khreishah",
+      "Mohsen Guizani"
+    ],
+    "year": 2019,
+    "journal": "IEEE Access",
+    "doi_or_url": "https://doi.org/10.1109/access.2019.2909530",
+    "citation_count": 2092,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2979906316",
+    "title": "How artificial intelligence will change the future of marketing",
+    "authors": [
+      "Thomas H. Davenport",
+      "Abhijit Guha",
+      "Dhruv Grewal",
+      "Timna Bre\u00dfgott"
+    ],
+    "year": 2019,
+    "journal": "Journal of the Academy of Marketing Science",
+    "doi_or_url": "https://doi.org/10.1007/s11747-019-00696-0",
+    "citation_count": 2074,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2897312833",
+    "title": "Gorilla in our midst: An online behavioral experiment builder",
+    "authors": [
+      "Alexander Leslie Anwyl-Irvine",
+      "Jessica Massonni\u00e9",
+      "Adam Flitton",
+      "Natasha Z. Kirkham",
+      "Jo Evershed"
+    ],
+    "year": 2019,
+    "journal": "Behavior Research Methods",
+    "doi_or_url": "https://doi.org/10.3758/s13428-019-01237-x",
+    "citation_count": 1804,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2963121727",
+    "title": "Smart radio environments empowered by reconfigurable AI meta-surfaces: an idea whose time has come",
+    "authors": [
+      "Marco Di Renzo",
+      "M\u00e9rouane Debbah",
+      "Dinh-Thuy Phan-Huy",
+      "Alessio Zappone",
+      "Mohamed\u2010Slim Alouini",
+      "Chau Yuen",
+      "Vincenzo Sciancalepore",
+      "George C. Alexandropoulos",
+      "Jakob Hoydis",
+      "Haris Gacanin",
+      "Julien de Rosny",
+      "Ahc\u00e8ne Bounceur"
+    ],
+    "year": 2019,
+    "journal": "EURASIP Journal on Wireless Communications and Networking",
+    "doi_or_url": "https://doi.org/10.1186/s13638-019-1438-9",
+    "citation_count": 1770,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1991418004",
+    "title": "Orchestrating Impartiality: The Impact of \u201cBlind\u201d Auditions on Female Musicians",
+    "authors": [
+      "Claudia Goldin",
+      "Cecilia Elena Rouse"
+    ],
+    "year": 2000,
+    "journal": "American Economic Review",
+    "doi_or_url": "https://doi.org/10.1257/aer.90.4.715",
+    "citation_count": 1725,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2080211902",
+    "title": "Evaluating Amazon's Mechanical Turk as a Tool for Experimental Behavioral Research",
+    "authors": [
+      "Matthew J. C. Crump",
+      "John V. McDonnell",
+      "Todd M. Gureckis"
+    ],
+    "year": 2013,
+    "journal": "PLoS ONE",
+    "doi_or_url": "https://doi.org/10.1371/journal.pone.0057410",
+    "citation_count": 1671,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W4206484811",
+    "title": "A Metaverse: Taxonomy, Components, Applications, and Open Challenges",
+    "authors": [
+      "Sangmin Park",
+      "Young\u2010Gab Kim"
+    ],
+    "year": 2022,
+    "journal": "IEEE Access",
+    "doi_or_url": "https://doi.org/10.1109/access.2021.3140175",
+    "citation_count": 1670,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2581042172",
+    "title": "Internet of Things: Architectures, Protocols, and Applications",
+    "authors": [
+      "Pallavi Sethi",
+      "Smruti R. Sarangi"
+    ],
+    "year": 2017,
+    "journal": "Journal of Electrical and Computer Engineering",
+    "doi_or_url": "https://doi.org/10.1155/2017/9324035",
+    "citation_count": 1638,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2747680751",
+    "title": "Natural language processing: state of the art, current trends and challenges",
+    "authors": [
+      "Diksha Khurana",
+      "Aditya Koli",
+      "Kiran Khatter",
+      "Sukhdev Singh"
+    ],
+    "year": 2022,
+    "journal": "Multimedia Tools and Applications",
+    "doi_or_url": "https://doi.org/10.1007/s11042-022-13428-4",
+    "citation_count": 1600,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3003667836",
+    "title": "Digital Twin: Values, Challenges and Enablers From a Modeling Perspective",
+    "authors": [
+      "Adil Rasheed",
+      "Omer San",
+      "Trond Kvamsdal"
+    ],
+    "year": 2020,
+    "journal": "IEEE Access",
+    "doi_or_url": "https://doi.org/10.1109/access.2020.2970143",
+    "citation_count": 1548,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1884571572",
+    "title": "The Growing Importance of Social Skills in the Labor Market*",
+    "authors": [
+      "David Deming"
+    ],
+    "year": 2017,
+    "journal": "The Quarterly Journal of Economics",
+    "doi_or_url": "https://doi.org/10.1093/qje/qjx022",
+    "citation_count": 1526,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W4308369850",
+    "title": "CDC Clinical Practice Guideline for Prescribing Opioids for Pain<b>\u2014</b>United States, 2022",
+    "authors": [
+      "Deborah Dowell",
+      "Kathleen Ragan",
+      "Christopher M. Jones",
+      "Grant Baldwin",
+      "Roger Chou"
+    ],
+    "year": 2022,
+    "journal": "MMWR Recommendations and Reports",
+    "doi_or_url": "https://doi.org/10.15585/mmwr.rr7103a1",
+    "citation_count": 1474,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2067605736",
+    "title": "Spatial Modulation for Generalized MIMO: Challenges, Opportunities, and Implementation",
+    "authors": [
+      "Marco Di Renzo",
+      "Harald Haas",
+      "Ali Ghrayeb",
+      "Shinya Sugiura",
+      "Lajos Hanzo"
+    ],
+    "year": 2014,
+    "journal": "Proceedings of the IEEE",
+    "doi_or_url": "https://doi.org/10.1109/jproc.2013.2287851",
+    "citation_count": 1443,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W4247155454",
+    "title": "Artificial Intelligence and Management: The Automation\u2013Augmentation Paradox",
+    "authors": [
+      "Sebastian Raisch",
+      "Sebastian Krakowski"
+    ],
+    "year": 2021,
+    "journal": "Academy of Management Review",
+    "doi_or_url": "https://doi.org/10.5465/amr.2018.0072",
+    "citation_count": 1415,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1570411240",
+    "title": "Unsupervised learning of digit recognition using spike-timing-dependent plasticity",
+    "authors": [
+      "Peter U. Diehl",
+      "Matthew Cook"
+    ],
+    "year": 2015,
+    "journal": "Frontiers in Computational Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/fncom.2015.00099",
+    "citation_count": 1391,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2591654989",
+    "title": "Culture and Institutions",
+    "authors": [
+      "Alberto Alesina",
+      "Paola Giuliano"
+    ],
+    "year": 2015,
+    "journal": "Journal of Economic Literature",
+    "doi_or_url": "https://doi.org/10.1257/jel.53.4.898",
+    "citation_count": 1367,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2251803266",
+    "title": "Don't count, predict! A systematic comparison of context-counting vs. context-predicting semantic vectors",
+    "authors": [
+      "Marco Baroni",
+      "Georgiana Dinu",
+      "Germ\u00e1n Kruszewski"
+    ],
+    "year": 2014,
+    "journal": "Unknown",
+    "doi_or_url": "https://doi.org/10.3115/v1/p14-1023",
+    "citation_count": 1366,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3045086480",
+    "title": "6G and Beyond: The Future of Wireless Communications Systems",
+    "authors": [
+      "Ian F. Akyildiz",
+      "A.C. Kak",
+      "Shuai Nie"
+    ],
+    "year": 2020,
+    "journal": "IEEE Access",
+    "doi_or_url": "https://doi.org/10.1109/access.2020.3010896",
+    "citation_count": 1267,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2159951683",
+    "title": "The SpiNNaker Project",
+    "authors": [
+      "Steve Furber",
+      "Francesco Galluppi",
+      "Steve Temple",
+      "Luis A. Plana"
+    ],
+    "year": 2014,
+    "journal": "Proceedings of the IEEE",
+    "doi_or_url": "https://doi.org/10.1109/jproc.2014.2304638",
+    "citation_count": 1257,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2162909942",
+    "title": "Evolution and behavioural responses to human\u2010induced rapid environmental change",
+    "authors": [
+      "Andrew Sih",
+      "Maud C. O. Ferrari",
+      "David J. Harris"
+    ],
+    "year": 2011,
+    "journal": "Evolutionary Applications",
+    "doi_or_url": "https://doi.org/10.1111/j.1752-4571.2010.00166.x",
+    "citation_count": 1214,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1969114959",
+    "title": "Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) collaborative update of CANMAT guidelines for the management of patients with bipolar disorder: update 2013",
+    "authors": [
+      "Lakshmi N. Yatham",
+      "Sidney H. Kennedy",
+      "Sagar V. Parikh",
+      "Ayal Schaffer",
+      "Serge Beaulieu",
+      "Martin Alda",
+      "Claire O\u2019Donovan",
+      "Glenda MacQueen",
+      "Roger S. McIntyre",
+      "Verinder Sharma",
+      "Arun Ravindran",
+      "L. Trevor Young"
+    ],
+    "year": 2012,
+    "journal": "Bipolar Disorders",
+    "doi_or_url": "https://doi.org/10.1111/bdi.12025",
+    "citation_count": 1212,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3089706104",
+    "title": "Satellite Communications in the New Space Era: A Survey and Future Challenges",
+    "authors": [
+      "Oltjon Kodheli",
+      "Eva Lagunas",
+      "Nicola Maturo",
+      "Shree Krishna Sharma",
+      "Bhavani Shankar",
+      "Jes\u00fas Fabi\u00e1n Mendoza Montoya",
+      "Juan Carlos Merlano Dunc\u00e1n",
+      "Danilo Spano",
+      "Symeon Chatzinotas",
+      "Steven Kisseleff",
+      "Jorge Querol",
+      "Lei Lei"
+    ],
+    "year": 2020,
+    "journal": "IEEE Communications Surveys & Tutorials",
+    "doi_or_url": "https://doi.org/10.1109/comst.2020.3028247",
+    "citation_count": 1188,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2023701920",
+    "title": "PsyToolkit: A software package for programming psychological experiments using Linux",
+    "authors": [
+      "Gijsbert Stoet"
+    ],
+    "year": 2010,
+    "journal": "Behavior Research Methods",
+    "doi_or_url": "https://doi.org/10.3758/brm.42.4.1096",
+    "citation_count": 1164,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2005355670",
+    "title": "Effects of Aerobic Exercise on Mild Cognitive Impairment",
+    "authors": [
+      "Laura D. Baker",
+      "Laura L. Frank",
+      "Karen E. Foster\u2010Schubert",
+      "Pattie S. Green",
+      "Charles W. Wilkinson",
+      "Anne McTiernan",
+      "Stephen R. Plymate",
+      "Mark A. Fishel",
+      "G. Stennis Watson",
+      "Brenna Cholerton",
+      "Glen E. Duncan",
+      "Pankaj Mehta"
+    ],
+    "year": 2010,
+    "journal": "Archives of Neurology",
+    "doi_or_url": "https://doi.org/10.1001/archneurol.2009.307",
+    "citation_count": 1143,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W4205129187",
+    "title": "Particle Swarm Optimization: A Comprehensive Survey",
+    "authors": [
+      "Tareq M. Shami",
+      "Ayman A. El\u2010Saleh",
+      "Mohammed Alswaitti",
+      "Qasem Al-Tashi",
+      "Mhd Amen Summakieh",
+      "Seyedali Mirjalili"
+    ],
+    "year": 2022,
+    "journal": "IEEE Access",
+    "doi_or_url": "https://doi.org/10.1109/access.2022.3142859",
+    "citation_count": 1137,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W4251181231",
+    "title": "Soft Robotics: Biological Inspiration, State of the Art, and Future Research",
+    "authors": [
+      "Deepak Trivedi",
+      "Christopher D. Rahn",
+      "William M. Kier",
+      "Ian D. Walker"
+    ],
+    "year": 2008,
+    "journal": "Applied Bionics and Biomechanics",
+    "doi_or_url": "https://doi.org/10.1155/2008/520417",
+    "citation_count": 1136,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2026559010",
+    "title": "Paying Not to Go to the Gym",
+    "authors": [
+      "Stefano Della Vigna",
+      "Ulrike Malmendier"
+    ],
+    "year": 2006,
+    "journal": "American Economic Review",
+    "doi_or_url": "https://doi.org/10.1257/aer.96.3.694",
+    "citation_count": 1125,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2070796659",
+    "title": "The Role of Entrepreneurship in US Job Creation and Economic Dynamism",
+    "authors": [
+      "Ryan A. Decker",
+      "John Haltiwanger",
+      "Ron S. Jarmin",
+      "Javier Miranda"
+    ],
+    "year": 2014,
+    "journal": "The Journal of Economic Perspectives",
+    "doi_or_url": "https://doi.org/10.1257/jep.28.3.3",
+    "citation_count": 1123,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3021951958",
+    "title": "An Overview on Edge Computing Research",
+    "authors": [
+      "Keyan Cao",
+      "Yefan Liu",
+      "Gongjie Meng",
+      "Qimeng Sun"
+    ],
+    "year": 2020,
+    "journal": "IEEE Access",
+    "doi_or_url": "https://doi.org/10.1109/access.2020.2991734",
+    "citation_count": 1119,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2809684781",
+    "title": "A comprehensive survey on machine learning for networking: evolution, applications and research opportunities",
+    "authors": [
+      "Raouf Boutaba",
+      "Mohammad A. Salahuddin",
+      "Noura Limam",
+      "Sara Ayoubi",
+      "Nashid Shahriar",
+      "Felipe Estrada\u2010Solano",
+      "Oscar Maur\u00edcio Caicedo Rend\u00f3n"
+    ],
+    "year": 2018,
+    "journal": "Journal of Internet Services and Applications",
+    "doi_or_url": "https://doi.org/10.1186/s13174-018-0087-2",
+    "citation_count": 965,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2155158173",
+    "title": "The Ease of Language Understanding (ELU) model: theoretical, empirical, and clinical advances",
+    "authors": [
+      "Jer\u00adker R\u00f6nnberg",
+      "Thomas Lunner",
+      "Adriana A. Zekveld",
+      "Patrik S\u00f6rqvist",
+      "Henrik Danielsson",
+      "Bj\u00f6rn Lyxell",
+      "\u00d6rjan Dahlstr\u00f6m",
+      "Carine Signoret",
+      "Stefan Stenfelt",
+      "M. Kathleen Pichora\u2010Fuller",
+      "Mary Rudner"
+    ],
+    "year": 2013,
+    "journal": "Frontiers in Systems Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/fnsys.2013.00031",
+    "citation_count": 934,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2109437806",
+    "title": "Labor Market Rigidities: At the Root of Unemployment in Europe",
+    "authors": [
+      "Horst Siebert"
+    ],
+    "year": 1997,
+    "journal": "The Journal of Economic Perspectives",
+    "doi_or_url": "https://doi.org/10.1257/jep.11.3.37",
+    "citation_count": 918,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3101981467",
+    "title": "A Survey on the Explainability of Supervised Machine Learning",
+    "authors": [
+      "Nadia Burkart",
+      "Marco F. Huber"
+    ],
+    "year": 2021,
+    "journal": "Journal of Artificial Intelligence Research",
+    "doi_or_url": "https://doi.org/10.1613/jair.1.12228",
+    "citation_count": 907,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2109025609",
+    "title": "Gait variability: methods, modeling and meaning",
+    "authors": [
+      "Jeffrey M. Hausdorff"
+    ],
+    "year": 2005,
+    "journal": "Journal of NeuroEngineering and Rehabilitation",
+    "doi_or_url": "https://doi.org/10.1186/1743-0003-2-19",
+    "citation_count": 886,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W4287762607",
+    "title": "A global outlook to the interruption of education due to COVID-19 pandemic: Navigating in a time of uncertainty and crisis",
+    "authors": [
+      "Aras Bozkurt",
+      "Insung Jung",
+      "Junhong Xiao",
+      "Viviane Vladimirschi",
+      "Robert Schuwer",
+      "Gennady Egorov",
+      "Sarah Lambert",
+      "Maha Al\u2010Freih",
+      "Judith Pete",
+      "Jr. Don Olcott",
+      "Virg\u00ednia Rod\u00e9s",
+      "Ignacio Aranciaga"
+    ],
+    "year": 2020,
+    "journal": "UniSA Research Outputs Repository (University of South Australia)",
+    "doi_or_url": "https://doi.org/10.5281/zenodo.3878572",
+    "citation_count": 864,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2154037495",
+    "title": "Combining brain-computer interfaces and assistive technologies: state-of-the-art and challenges",
+    "authors": [
+      "Jos\u00e9 del R. Mill\u00e1n"
+    ],
+    "year": 2010,
+    "journal": "Frontiers in Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/fnins.2010.00161",
+    "citation_count": 855,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2762564373",
+    "title": "Older Adults Perceptions of Technology and Barriers to Interacting with Tablet Computers: A Focus Group Study",
+    "authors": [
+      "Eleftheria Vaportzis",
+      "Maria Giatsi Clausen",
+      "Alan J. Gow"
+    ],
+    "year": 2017,
+    "journal": "Frontiers in Psychology",
+    "doi_or_url": "https://doi.org/10.3389/fpsyg.2017.01687",
+    "citation_count": 847,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2126861692",
+    "title": "Primary Care Guidelines for the Management of Persons Infected with Human Immunodeficiency Virus: 2009 Update by the HIV Medicine Association of the Infectious Diseases Society of America",
+    "authors": [
+      "Judith A. Aberg",
+      "Jonathan E. Kaplan",
+      "Howard Libman",
+      "Patricia Emmanuel",
+      "Jean Anderson",
+      "Valerie E. Stone",
+      "James M. Oleske",
+      "Judith S. Currier",
+      "Joel E. Gallant"
+    ],
+    "year": 2009,
+    "journal": "Clinical Infectious Diseases",
+    "doi_or_url": "https://doi.org/10.1086/605292",
+    "citation_count": 839,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2804990926",
+    "title": "Introduction\u2014Platforms and Infrastructures in the Digital Age",
+    "authors": [
+      "Panos Constantinides",
+      "Ola Henfridsson",
+      "Geoffrey Parker"
+    ],
+    "year": 2018,
+    "journal": "Information Systems Research",
+    "doi_or_url": "https://doi.org/10.1287/isre.2018.0794",
+    "citation_count": 837,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2803435903",
+    "title": "Negative emissions\u2014Part 1: Research landscape and synthesis",
+    "authors": [
+      "Jan C. Minx",
+      "William F. Lamb",
+      "Max Callaghan",
+      "Sabine Fuss",
+      "J\u00e9r\u00f4me Hilaire",
+      "Felix Creutzig",
+      "Thorben Amann",
+      "Tim Beringer",
+      "Wagner de Oliveira Garcia",
+      "Jens Hartmann",
+      "Tarun Khanna",
+      "Dominic Lenzi"
+    ],
+    "year": 2018,
+    "journal": "Environmental Research Letters",
+    "doi_or_url": "https://doi.org/10.1088/1748-9326/aabf9b",
+    "citation_count": 836,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2130195834",
+    "title": "Action and behavior: a free-energy formulation",
+    "authors": [
+      "Karl Friston",
+      "Jean Daunizeau",
+      "James M. Kilner",
+      "Stefan J. Kiebel"
+    ],
+    "year": 2010,
+    "journal": "Biological Cybernetics",
+    "doi_or_url": "https://doi.org/10.1007/s00422-010-0364-z",
+    "citation_count": 834,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3034606981",
+    "title": "A Survey of Multi-Access Edge Computing in 5G and Beyond: Fundamentals, Technology Integration, and State-of-the-Art",
+    "authors": [
+      "Quoc\u2010Viet Pham",
+      "Fang Fang",
+      "Vu Nguyen Ha",
+      "Md. Jalil Piran",
+      "Mai Le",
+      "Long Bao Le",
+      "Won\u2010Joo Hwang",
+      "Zhiguo Ding"
+    ],
+    "year": 2020,
+    "journal": "IEEE Access",
+    "doi_or_url": "https://doi.org/10.1109/access.2020.3001277",
+    "citation_count": 824,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2149983193",
+    "title": "Plasticity of brain networks in a randomized intervention trial of exercise training in older adults",
+    "authors": [
+      "Voss Voss"
+    ],
+    "year": 2010,
+    "journal": "Frontiers in Aging Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/fnagi.2010.00032",
+    "citation_count": 824,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2100359507",
+    "title": "The evolution of self-control",
+    "authors": [
+      "Evan L. MacLean",
+      "Brian Hare",
+      "Charles L. Nunn",
+      "Elsa Addessi",
+      "Federica Amici",
+      "Rindy C. Anderson",
+      "Filippo Aureli",
+      "Joseph M. Baker",
+      "Amanda Bania",
+      "Allison Barnard",
+      "Neeltje J. Boogert",
+      "Elizabeth M. Brannon"
+    ],
+    "year": 2014,
+    "journal": "Proceedings of the National Academy of Sciences",
+    "doi_or_url": "https://doi.org/10.1073/pnas.1323533111",
+    "citation_count": 823,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2737889100",
+    "title": "Next generation cloud computing: New trends and research directions",
+    "authors": [
+      "Blesson Varghese",
+      "Rajkumar Buyya"
+    ],
+    "year": 2017,
+    "journal": "Future Generation Computer Systems",
+    "doi_or_url": "https://doi.org/10.1016/j.future.2017.09.020",
+    "citation_count": 815,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2101400241",
+    "title": "Development of Large-Scale Functional Brain Networks in Children",
+    "authors": [
+      "Kaustubh Supekar",
+      "Mark A. Musen",
+      "Vinod Menon"
+    ],
+    "year": 2009,
+    "journal": "PLoS Biology",
+    "doi_or_url": "https://doi.org/10.1371/journal.pbio.1000157",
+    "citation_count": 809,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2098484201",
+    "title": "Where, When, Why, and For Whom Do Residential Contexts Matter? Moving Away from the Dichotomous Understanding of Neighborhood Effects",
+    "authors": [
+      "Patrick Sharkey",
+      "Jacob Faber"
+    ],
+    "year": 2014,
+    "journal": "Annual Review of Sociology",
+    "doi_or_url": "https://doi.org/10.1146/annurev-soc-071913-043350",
+    "citation_count": 809,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2118658083",
+    "title": "Working in Practice But Not in Theory: Theoretical Challenges of \u201cHigh-Reliability Organizations\u201d",
+    "authors": [
+      "Todd R. LaPorte",
+      "Paula M. Consolini"
+    ],
+    "year": 1991,
+    "journal": "Journal of Public Administration Research and Theory",
+    "doi_or_url": "https://doi.org/10.1093/oxfordjournals.jpart.a037070",
+    "citation_count": 804,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2123523993",
+    "title": "Brain Maturation in Adolescence and Young Adulthood: Regional Age-Related Changes in Cortical Thickness and White Matter Volume and Microstructure",
+    "authors": [
+      "Christian K. Tamnes",
+      "Ylva \u00d8stby",
+      "Anders M. Fjell",
+      "Lars T. Westlye",
+      "Paulina Due\u2010T\u00f8nnessen",
+      "Kristine B. Walhovd"
+    ],
+    "year": 2009,
+    "journal": "Cerebral Cortex",
+    "doi_or_url": "https://doi.org/10.1093/cercor/bhp118",
+    "citation_count": 793,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3033928040",
+    "title": "An Overview of Artificial Intelligence Applications for Power Electronics",
+    "authors": [
+      "Shuai Zhao",
+      "Frede Blaabjerg",
+      "Huai Wang"
+    ],
+    "year": 2020,
+    "journal": "IEEE Transactions on Power Electronics",
+    "doi_or_url": "https://doi.org/10.1109/tpel.2020.3024914",
+    "citation_count": 792,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2113412631",
+    "title": "Automatic Classification of Artifactual ICA-Components for Artifact Removal in EEG Signals",
+    "authors": [
+      "Irene Winkler",
+      "Stefan Haufe",
+      "Michael Tangermann"
+    ],
+    "year": 2011,
+    "journal": "Behavioral and Brain Functions",
+    "doi_or_url": "https://doi.org/10.1186/1744-9081-7-30",
+    "citation_count": 784,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2156899532",
+    "title": "Merging information in speech recognition: Feedback is never necessary",
+    "authors": [
+      "Dennis Norris",
+      "James M. McQueen",
+      "Anne Cutler"
+    ],
+    "year": 2000,
+    "journal": "Behavioral and Brain Sciences",
+    "doi_or_url": "https://doi.org/10.1017/s0140525x00003241",
+    "citation_count": 769,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2989178978",
+    "title": "5G network slicing using SDN and NFV: A survey of taxonomy, architectures and future challenges",
+    "authors": [
+      "Alcardo Alex Barakabitze",
+      "Arslan Ahmad",
+      "Rashid Mijumbi",
+      "Andrew Hines"
+    ],
+    "year": 2019,
+    "journal": "Computer Networks",
+    "doi_or_url": "https://doi.org/10.1016/j.comnet.2019.106984",
+    "citation_count": 765,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2132551870",
+    "title": "Informatics and Data Mining Tools and Strategies for the Human Connectome Project",
+    "authors": [
+      "Daniel S. Marcus",
+      "John Harwell",
+      "Timothy R. Olsen",
+      "Michael R. Hodge",
+      "Matthew F. Glasser",
+      "Fred Prior",
+      "Mark Jenkinson",
+      "Timothy O. Laumann",
+      "Sandra W. Curtiss",
+      "David C. Van Essen"
+    ],
+    "year": 2011,
+    "journal": "Frontiers in Neuroinformatics",
+    "doi_or_url": "https://doi.org/10.3389/fninf.2011.00004",
+    "citation_count": 761,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2163801252",
+    "title": "Comprehensive Overview of Nursing and Interdisciplinary Rehabilitation Care of the Stroke Patient",
+    "authors": [
+      "Elaine Miller",
+      "Laura L. Murray",
+      "Lorie Richards",
+      "Richard D. Zorowitz",
+      "Tamilyn Bakas",
+      "Patricia C. Clark",
+      "Sandra A. Billinger"
+    ],
+    "year": 2010,
+    "journal": "Stroke",
+    "doi_or_url": "https://doi.org/10.1161/str.0b013e3181e7512b",
+    "citation_count": 754,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W4206006624",
+    "title": "Consolidated Health Economic Evaluation Reporting Standards (CHEERS) 2022 Explanation and Elaboration: A Report of the ISPOR CHEERS II Good Practices Task Force",
+    "authors": [
+      "Don Husereau",
+      "Michael Drummond",
+      "Federico Augustovski",
+      "Esther W. de Bekker\u2010Grob",
+      "Andrew Briggs",
+      "Chris Carswell",
+      "Lisa Caulley",
+      "Nathorn Chaiyakunapruk",
+      "Dan Greenberg",
+      "Elizabeth Loder",
+      "Josephine Mauskopf",
+      "C. Daniel Mullins"
+    ],
+    "year": 2022,
+    "journal": "Value in Health",
+    "doi_or_url": "https://doi.org/10.1016/j.jval.2021.10.008",
+    "citation_count": 753,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2144915368",
+    "title": "Destination Marketing Organizations and destination marketing: A\u00a0narrative analysis of the literature",
+    "authors": [
+      "Steven Pike",
+      "Stephen J. Page"
+    ],
+    "year": 2013,
+    "journal": "Tourism Management",
+    "doi_or_url": "https://doi.org/10.1016/j.tourman.2013.09.009",
+    "citation_count": 716,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3144404977",
+    "title": "Survey on 6G Frontiers: Trends, Applications, Requirements, Technologies and Future Research",
+    "authors": [
+      "Chamitha de Alwis",
+      "Anshuman Kalla",
+      "Quoc\u2010Viet Pham",
+      "Pardeep Kumar",
+      "Kapal Dev",
+      "Won\u2010Joo Hwang",
+      "Madhusanka Liyanage"
+    ],
+    "year": 2021,
+    "journal": "IEEE Open Journal of the Communications Society",
+    "doi_or_url": "https://doi.org/10.1109/ojcoms.2021.3071496",
+    "citation_count": 712,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2914774339",
+    "title": "Part 1: Executive Summary",
+    "authors": [
+      "Robert W. Neumar",
+      "Michael Sh\u00fcster",
+      "Clifton W. Callaway",
+      "Lana M. Gent",
+      "Dianne L. Atkins",
+      "Farhan Bhanji",
+      "Steven C. Brooks",
+      "Allan R. de Caen",
+      "Michael W. Donnino",
+      "Jose Maria E. Ferrer",
+      "Monica E. Kleinman",
+      "Steven L. Kronick"
+    ],
+    "year": 2015,
+    "journal": "Circulation",
+    "doi_or_url": "https://doi.org/10.1161/cir.0000000000000252",
+    "citation_count": 700,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1488939971",
+    "title": "The Problem of Fit between Ecosystems and Institutions: Ten Years Later",
+    "authors": [
+      "Carl Folke",
+      "Lowell Pritchard",
+      "Fikret Berkes",
+      "Johan Colding",
+      "Uno Svedin"
+    ],
+    "year": 2007,
+    "journal": "Ecology and Society",
+    "doi_or_url": "https://doi.org/10.5751/es-02064-120130",
+    "citation_count": 698,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2170834958",
+    "title": "The Organization of Firms Across Countries*",
+    "authors": [
+      "Nicholas Bloom",
+      "Raffaella Sadun",
+      "John Van Reenen"
+    ],
+    "year": 2012,
+    "journal": "The Quarterly Journal of Economics",
+    "doi_or_url": "https://doi.org/10.1093/qje/qje029",
+    "citation_count": 693,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2126712529",
+    "title": "Norepinephrine ignites local hotspots of neuronal excitation: How arousal amplifies selectivity in perception and memory",
+    "authors": [
+      "Mara Mather",
+      "David Clewett",
+      "Michiko Sakaki",
+      "Carolyn W. Harley"
+    ],
+    "year": 2015,
+    "journal": "Behavioral and Brain Sciences",
+    "doi_or_url": "https://doi.org/10.1017/s0140525x15000667",
+    "citation_count": 691,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2780601052",
+    "title": "An open resource for transdiagnostic research in pediatric mental health and learning disorders",
+    "authors": [
+      "Lindsay Alexander",
+      "Jasmine Escalera",
+      "Lei Ai",
+      "Charissa Andreotti",
+      "Karina Febre",
+      "Alexander Mangone",
+      "Natan Vega Potler",
+      "Nicolas Langer",
+      "Alexis Alexander",
+      "Meagan Kovacs",
+      "Shannon Litke",
+      "Bridget O\u2019Hagan"
+    ],
+    "year": 2017,
+    "journal": "Scientific Data",
+    "doi_or_url": "https://doi.org/10.1038/sdata.2017.181",
+    "citation_count": 682,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2994446013",
+    "title": "Recent Advances in Robot Learning from Demonstration",
+    "authors": [
+      "Harish Ravichandar",
+      "Athanasios Polydoros",
+      "Sonia Chernova",
+      "Aude Billard"
+    ],
+    "year": 2019,
+    "journal": "Annual Review of Control Robotics and Autonomous Systems",
+    "doi_or_url": "https://doi.org/10.1146/annurev-control-100819-063206",
+    "citation_count": 681,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2951065015",
+    "title": "Towards an integration of deep learning and neuroscience",
+    "authors": [
+      "Adam Marblestone",
+      "Greg Wayne",
+      "Konrad P. K\u00f6rding"
+    ],
+    "year": 2016,
+    "journal": "arXiv (Cornell University)",
+    "doi_or_url": "https://doi.org/10.3389/fncom.2016.00094",
+    "citation_count": 679,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3033694598",
+    "title": "A global outlook to the interruption of education due to COVID-19 pandemic: Navigating in a time of uncertainty and crisis",
+    "authors": [
+      "Aras Bozkurt",
+      "Insung Jung",
+      "Junhong Xiao",
+      "Viviane Vladimirschi",
+      "Robert Schuwer",
+      "Gennady Egorov",
+      "Sarah Lambert",
+      "Maha Al\u2010Freih",
+      "Judith Pete",
+      "Don Olcott",
+      "Virg\u00ednia Rod\u00e9s",
+      "Ignacio Aranciaga"
+    ],
+    "year": 2020,
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "doi_or_url": "https://doi.org/10.5281/zenodo.3878571",
+    "citation_count": 676,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W4365504037",
+    "title": "A survey on deep learning tools dealing with data scarcity: definitions, challenges, solutions, tips, and applications",
+    "authors": [
+      "Laith Alzubaidi",
+      "Jinshuai Bai",
+      "Aiman Al-Sabaawi",
+      "Jos\u00e9 Santamar\u00eda",
+      "A. S. Albahri",
+      "Bashar Sami Nayyef Al-dabbagh",
+      "Mohammed A. Fadhel",
+      "Mohamed Manoufali",
+      "Jinglan Zhang",
+      "Ali H. Al\u2010Timemy",
+      "Ye Duan",
+      "Amjed Abdullah"
+    ],
+    "year": 2023,
+    "journal": "Journal Of Big Data",
+    "doi_or_url": "https://doi.org/10.1186/s40537-023-00727-2",
+    "citation_count": 667,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2998691503",
+    "title": "Automation, Algorithms, and Beyond: Why Work Design Matters More Than Ever in a Digital World",
+    "authors": [
+      "Sharon K. Parker",
+      "Gudela Grote"
+    ],
+    "year": 2019,
+    "journal": "Applied Psychology",
+    "doi_or_url": "https://doi.org/10.1111/apps.12241",
+    "citation_count": 667,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2603968080",
+    "title": "Dynamic hidden states underlying working-memory-guided behavior",
+    "authors": [
+      "Michael J. Wolff",
+      "Janina Jochim",
+      "Elkan G. Aky\u00fcrek",
+      "Mark G. Stokes"
+    ],
+    "year": 2017,
+    "journal": "Nature Neuroscience",
+    "doi_or_url": "https://doi.org/10.1038/nn.4546",
+    "citation_count": 659,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2277727683",
+    "title": "The prospects for hydrogen as an energy carrier: an overview of hydrogen energy and hydrogen energy systems",
+    "authors": [
+      "Marc A. Rosen",
+      "Seama Koohi\u2010Fayegh"
+    ],
+    "year": 2016,
+    "journal": "Energy Ecology and Environment",
+    "doi_or_url": "https://doi.org/10.1007/s40974-016-0005-z",
+    "citation_count": 657,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2155058526",
+    "title": "Cultural group selection plays an essential role in explaining human cooperation: A sketch of the evidence",
+    "authors": [
+      "Peter J. Richerson",
+      "Ryan Baldini",
+      "Adrian V. Bell",
+      "Kathryn Demps",
+      "Karl Frost",
+      "Vicken Hillis",
+      "Sarah Mathew",
+      "Emily K. Newton",
+      "Nicole Naar",
+      "Lesley Newson",
+      "Cody T. Ross",
+      "Paul E. Smaldino"
+    ],
+    "year": 2014,
+    "journal": "Behavioral and Brain Sciences",
+    "doi_or_url": "https://doi.org/10.1017/s0140525x1400106x",
+    "citation_count": 647,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2020055733",
+    "title": "Global Connectivity of Prefrontal Cortex Predicts Cognitive Control and Intelligence",
+    "authors": [
+      "Michael W. Cole",
+      "Tal Yarkoni",
+      "Grega Repov\u0161",
+      "Alan Anticevic",
+      "Todd S. Braver"
+    ],
+    "year": 2012,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.0536-12.2012",
+    "citation_count": 640,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2803333083",
+    "title": "Report of the High-Level Commission on Carbon Prices",
+    "authors": [
+      "Nicholas Stern",
+      "Joseph E. Stiglitz",
+      "Duan, Maosheng",
+      "Edenhofer, Ottmar",
+      "Giraud, Ga\u00ebl",
+      "Heal, Geoffrey M.",
+      "La Rovere, Emilio L\u00e8bre",
+      "Morris, Adele",
+      "Moyer, Elisabeth",
+      "Pangestu, Mari",
+      "Shukla, Priyadarshi R.",
+      "Sokona, Youba"
+    ],
+    "year": 2017,
+    "journal": "Unknown",
+    "doi_or_url": "https://doi.org/10.7916/d8-w2nc-4103",
+    "citation_count": 637,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3133913697",
+    "title": "A Survey on Mobile Augmented Reality With 5G Mobile Edge Computing: Architectures, Applications, and Technical Aspects",
+    "authors": [
+      "Yushan Siriwardhana",
+      "Pawani Porambage",
+      "Madhusanka Liyanage",
+      "Mika Ylianttila"
+    ],
+    "year": 2021,
+    "journal": "IEEE Communications Surveys & Tutorials",
+    "doi_or_url": "https://doi.org/10.1109/comst.2021.3061981",
+    "citation_count": 636,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3214743865",
+    "title": "Bayesian Item Response Modeling in <i>R</i> with <b>brms</b> and <i>Stan</i>",
+    "authors": [
+      "Paul\u2010Christian B\u00fcrkner"
+    ],
+    "year": 2021,
+    "journal": "Journal of Statistical Software",
+    "doi_or_url": "https://doi.org/10.18637/jss.v100.i05",
+    "citation_count": 633,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2929612105",
+    "title": "Quantum Machine Learning for 6G Communication Networks: State-of-the-Art and Vision for the Future",
+    "authors": [
+      "Syed Junaid Nawaz",
+      "Shree Krishna Sharma",
+      "Shurjeel Wyne",
+      "Mohammad Patwary",
+      "Md Asaduzzaman"
+    ],
+    "year": 2019,
+    "journal": "IEEE Access",
+    "doi_or_url": "https://doi.org/10.1109/access.2019.2909490",
+    "citation_count": 630,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3123312015",
+    "title": "Perspectives on Behavioral Finance: Does \"Irrationality\" Disappear with Wealth? Evidence from Expectations and Actions",
+    "authors": [
+      "Annette Vissing\u2010J\u00f8rgensen"
+    ],
+    "year": 2003,
+    "journal": "NBER Macroeconomics Annual",
+    "doi_or_url": "https://doi.org/10.1086/ma.18.3585252",
+    "citation_count": 616,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1971602990",
+    "title": "Design efficiency for non\u2010market valuation with choice modelling: how to measure it, what to report and why*",
+    "authors": [
+      "Riccardo Scarpa",
+      "John M. Rose"
+    ],
+    "year": 2008,
+    "journal": "Australian Journal of Agricultural and Resource Economics",
+    "doi_or_url": "https://doi.org/10.1111/j.1467-8489.2007.00436.x",
+    "citation_count": 615,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2008705190",
+    "title": "The Role of Advanced Sensing in Smart Cities",
+    "authors": [
+      "Gerhard P. Hancke",
+      "Bruno Silva",
+      "Gerhard P. Hancke",
+      "Gerhard Hancke, Jr.",
+      "Gerhard Hancke, Jr."
+    ],
+    "year": 2012,
+    "journal": "Sensors",
+    "doi_or_url": "https://doi.org/10.3390/s130100393",
+    "citation_count": 606,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2964101383",
+    "title": "An Overview on Application of Machine Learning Techniques in Optical Networks",
+    "authors": [
+      "Francesco Musumeci",
+      "Cristina Rottondi",
+      "Avishek Nag",
+      "Irene Macaluso",
+      "Darko Zibar",
+      "Marco Ruffini",
+      "Massimo Tornatore"
+    ],
+    "year": 2018,
+    "journal": "IEEE Communications Surveys & Tutorials",
+    "doi_or_url": "https://doi.org/10.1109/comst.2018.2880039",
+    "citation_count": 605,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2137554955",
+    "title": "Psychosis and autism as diametrical disorders of the social brain",
+    "authors": [
+      "Bernard J. Crespi",
+      "Christopher Badcock"
+    ],
+    "year": 2008,
+    "journal": "Behavioral and Brain Sciences",
+    "doi_or_url": "https://doi.org/10.1017/s0140525x08004214",
+    "citation_count": 599,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1608166496",
+    "title": "Timing in turn-taking and its implications for processing models of language",
+    "authors": [
+      "Stephen C. Levinson",
+      "Francisco Torreira"
+    ],
+    "year": 2015,
+    "journal": "Frontiers in Psychology",
+    "doi_or_url": "https://doi.org/10.3389/fpsyg.2015.00731",
+    "citation_count": 595,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2144093039",
+    "title": "The impact of anxiety upon cognition: perspectives from human threat of shock studies",
+    "authors": [
+      "Oliver J. Robinson",
+      "Katherine Vytal",
+      "Brian R. Cornwell",
+      "Christian Grillon"
+    ],
+    "year": 2013,
+    "journal": "Frontiers in Human Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/fnhum.2013.00203",
+    "citation_count": 586,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1988276380",
+    "title": "Feature-based memory-driven attentional capture: Visual working memory content affects visual attention.",
+    "authors": [
+      "Christian N. L. Olivers",
+      "Frank Meijer",
+      "Jan Theeuwes"
+    ],
+    "year": 2006,
+    "journal": "Journal of Experimental Psychology Human Perception & Performance",
+    "doi_or_url": "https://doi.org/10.1037/0096-1523.32.5.1243",
+    "citation_count": 584,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2101617792",
+    "title": "An Overview on Wireless Sensor Networks Technology and Evolution",
+    "authors": [
+      "Chiara Buratti",
+      "Andrea Conti",
+      "Davide Dardari",
+      "Roberto Verdone"
+    ],
+    "year": 2009,
+    "journal": "Sensors",
+    "doi_or_url": "https://doi.org/10.3390/s90906869",
+    "citation_count": 583,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3176707157",
+    "title": "Deep learning for AI",
+    "authors": [
+      "Yoshua Bengio",
+      "Yann LeCun",
+      "Geoffrey E. Hinton"
+    ],
+    "year": 2021,
+    "journal": "Communications of the ACM",
+    "doi_or_url": "https://doi.org/10.1145/3448250",
+    "citation_count": 577,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2113749736",
+    "title": "Cyclostationary Signatures in Practical Cognitive Radio Applications",
+    "authors": [
+      "Paul D. Sutton",
+      "Keith Nolan",
+      "Linda Doyle"
+    ],
+    "year": 2008,
+    "journal": "IEEE Journal on Selected Areas in Communications",
+    "doi_or_url": "https://doi.org/10.1109/jsac.2008.080103",
+    "citation_count": 568,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W4240794548",
+    "title": "American Association Of Clinical Endocrinologists And American College Of Endocrinology -Clinical Practice Guidelines For Developing A Diabetes Mellitus Comprehensive Care Plan \u2013 2015",
+    "authors": [
+      "Yehuda Handelsman",
+      "Zachary T. Bloomgarden",
+      "George Grunberger",
+      "Guillermo E. Umpierrez",
+      "Robert S. Zimmerman",
+      "Timothy S. Bailey",
+      "Lawrence Blonde",
+      "George A. Bray",
+      "A. Jay Cohen",
+      "Samuel Dagogo\u2010Jack",
+      "Jaime A. Davidson",
+      "Daniel Einhorn"
+    ],
+    "year": 2015,
+    "journal": "Endocrine Practice",
+    "doi_or_url": "https://doi.org/10.4158/ep15672.glsuppl",
+    "citation_count": 562,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2773411043",
+    "title": "The Design of a Dynamic Emergency Response Management Information System (DERMIS)",
+    "authors": [
+      "Murray Turoff",
+      "Michael Chumer",
+      "Bartel Van de Walle",
+      "Xiang Yao"
+    ],
+    "year": 2004,
+    "journal": "Journal of the Association for Information Systems",
+    "doi_or_url": "https://openalex.org/W2773411043",
+    "citation_count": 560,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3139657805",
+    "title": "Advancing Neuromorphic Computing With Loihi: A Survey of Results and Outlook",
+    "authors": [
+      "Mike Davies",
+      "Andreas Wild",
+      "Garrick Orchard",
+      "Yulia Sandamirskaya",
+      "G. A. Fonseca Guerra",
+      "Prasad Joshi",
+      "Philipp Plank",
+      "Sumedh R. Risbud"
+    ],
+    "year": 2021,
+    "journal": "Proceedings of the IEEE",
+    "doi_or_url": "https://doi.org/10.1109/jproc.2021.3067593",
+    "citation_count": 559,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2999889141",
+    "title": "Dopamine and glutamate in schizophrenia: biology, symptoms and treatment",
+    "authors": [
+      "Robert A. McCutcheon",
+      "John H. Krystal",
+      "Oliver Howes"
+    ],
+    "year": 2020,
+    "journal": "World Psychiatry",
+    "doi_or_url": "https://doi.org/10.1002/wps.20693",
+    "citation_count": 558,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2103355737",
+    "title": "Enumeration versus multiple object tracking: the case of action video game players",
+    "authors": [
+      "Colin Green",
+      "Daphn\u00e9 Bavelier"
+    ],
+    "year": 2005,
+    "journal": "Cognition",
+    "doi_or_url": "https://doi.org/10.1016/j.cognition.2005.10.004",
+    "citation_count": 548,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2063716754",
+    "title": "Bounded Integration in Parietal Cortex Underlies Decisions Even When Viewing Duration Is Dictated by the Environment",
+    "authors": [
+      "Roozbeh Kiani",
+      "Timothy D. Hanks",
+      "Michael N. Shadlen"
+    ],
+    "year": 2008,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.4761-07.2008",
+    "citation_count": 546,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1985013992",
+    "title": "The structure of Design Problem Spaces",
+    "authors": [
+      "Vinod Goel",
+      "Peter Pirolli"
+    ],
+    "year": 1992,
+    "journal": "Cognitive Science",
+    "doi_or_url": "https://doi.org/10.1207/s15516709cog1603_3",
+    "citation_count": 546,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2055943083",
+    "title": "Analyzing the Airwaves Auction",
+    "authors": [
+      "R. Preston McAfee",
+      "John McMillan"
+    ],
+    "year": 1996,
+    "journal": "The Journal of Economic Perspectives",
+    "doi_or_url": "https://doi.org/10.1257/jep.10.1.159",
+    "citation_count": 538,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2052416029",
+    "title": "The Revenge of Homo Economicus: Contested Exchange and the Revival of Political Economy",
+    "authors": [
+      "Samuel Bowles",
+      "Herbert Gintis"
+    ],
+    "year": 1993,
+    "journal": "The Journal of Economic Perspectives",
+    "doi_or_url": "https://doi.org/10.1257/jep.7.1.83",
+    "citation_count": 537,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2103272537",
+    "title": "Wanted, A National Teacher Supply Policy for Education:The Right Way to Meet The \"Highly Qualified Teacher\" Challenge",
+    "authors": [
+      "Linda Darling\u2010Hammond",
+      "Gary Sykes"
+    ],
+    "year": 2003,
+    "journal": "Education Policy Analysis Archives",
+    "doi_or_url": "https://doi.org/10.14507/epaa.v11n33.2003",
+    "citation_count": 531,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2006412775",
+    "title": "Bilingual language control: An event-related brain potential study",
+    "authors": [
+      "Ingrid K. Christoffels",
+      "Christine Firk",
+      "Niels O. Schiller"
+    ],
+    "year": 2007,
+    "journal": "Brain Research",
+    "doi_or_url": "https://doi.org/10.1016/j.brainres.2007.01.137",
+    "citation_count": 527,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2959716049",
+    "title": "Snorkel: rapid training data creation with weak supervision.",
+    "authors": [
+      "Alexander Ratner",
+      "Stephen H Bach",
+      "Henry Ehrenberg",
+      "Jason Fries",
+      "Sen Wu",
+      "Christopher R\u00e9"
+    ],
+    "year": 2020,
+    "journal": "PubMed",
+    "doi_or_url": "https://doi.org/10.1007/s00778-019-00552-1",
+    "citation_count": 519,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W4313207390",
+    "title": "The International Society for Heart and Lung Transplantation (ISHLT) guidelines for the care of heart transplant recipients",
+    "authors": [
+      "A. Velleca",
+      "M. Shullo",
+      "K. Dhital",
+      "Estela Azeka",
+      "Monica Colvin",
+      "E.C. DePasquale",
+      "Marta Farrero",
+      "Luis Garc\u00eda\u2010Guereta",
+      "Gina Jamero",
+      "Kiran K. Khush",
+      "Jacob Lavee",
+      "Stephanie M. Pouch"
+    ],
+    "year": 2022,
+    "journal": "The Journal of Heart and Lung Transplantation",
+    "doi_or_url": "https://doi.org/10.1016/j.healun.2022.10.015",
+    "citation_count": 515,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2106272460",
+    "title": "Timed picture naming in seven languages",
+    "authors": [
+      "Elizabeth Bates",
+      "Simonetta D\u2019Amico",
+      "Thomas Jacobsen",
+      "Anna Sz\u00e9kely",
+      "Elena Andonova",
+      "Antonella Devescovi",
+      "Dan Herron",
+      "Ching Ching Lu",
+      "Thomas Pechmann",
+      "Csaba Pl\u00e9h",
+      "Nicole Y.Y. Wicha",
+      "Kara D. Federmeier"
+    ],
+    "year": 2003,
+    "journal": "Psychonomic Bulletin & Review",
+    "doi_or_url": "https://doi.org/10.3758/bf03196494",
+    "citation_count": 513,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2070871741",
+    "title": "Working-memory capacity protects model-based learning from stress",
+    "authors": [
+      "A. Ross Otto",
+      "Candace M. Raio",
+      "Alice Chiang",
+      "Elizabeth A. Phelps",
+      "Nathaniel D. Daw"
+    ],
+    "year": 2013,
+    "journal": "Proceedings of the National Academy of Sciences",
+    "doi_or_url": "https://doi.org/10.1073/pnas.1312011110",
+    "citation_count": 510,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3124457260",
+    "title": "Managerial Traits and Capital Structure Decisions",
+    "authors": [
+      "Dirk Hackbarth"
+    ],
+    "year": 2008,
+    "journal": "Journal of Financial and Quantitative Analysis",
+    "doi_or_url": "https://doi.org/10.1017/s002210900001437x",
+    "citation_count": 506,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2966486455",
+    "title": "Technology readiness: a meta-analysis of conceptualizations of the construct and its impact on technology usage",
+    "authors": [
+      "Markus Blut",
+      "Cheng Wang"
+    ],
+    "year": 2019,
+    "journal": "Journal of the Academy of Marketing Science",
+    "doi_or_url": "https://doi.org/10.1007/s11747-019-00680-8",
+    "citation_count": 502,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2000618191",
+    "title": "Wireless Sensor Networks for Condition Monitoring in the Railway Industry: A Survey",
+    "authors": [
+      "Joanna Hodge",
+      "Simon O\u2019Keefe",
+      "Michael Weeks",
+      "Anthony Moulds"
+    ],
+    "year": 2014,
+    "journal": "IEEE Transactions on Intelligent Transportation Systems",
+    "doi_or_url": "https://doi.org/10.1109/tits.2014.2366512",
+    "citation_count": 499,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  }
+]
