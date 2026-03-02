@@ -1,13 +1,13 @@
-# Task Switching Task
+﻿# Task Switching Task
 
 ![Maturity: draft](https://img.shields.io/badge/Maturity-draft-64748b?style=flat-square&labelColor=111827)
 
 | Field | Value |
 |---|---|
 | Name | Task Switching Task |
-| Version | v0.1.1-dev |
+| Version | v0.2.0-dev |
 | URL / Repository | https://github.com/TaskBeacon/T000027-task-switching |
-| Short Description | Cognitive flexibility paradigm with repeat/switch/mixed conditions. |
+| Short Description | Cued task-switching paradigm with explicit rule transitions and switch-cost metrics. |
 | Created By | TaskBeacon |
 | Date Updated | 2026-02-19 |
 | PsyFlow Version | 0.1.9 |
@@ -18,9 +18,9 @@
 
 ## 1. Task Overview
 
-This task implements a task-switching paradigm with condition labels `repeat`, `switch`, and `mixed`. Trials include cue presentation, an anticipation phase, target response capture, and feedback.
+This task implements a cue-based task-switching paradigm. Each trial first presents a rule cue (`奇偶判断` or `大小判断`), then a target digit appears and participants respond with a two-key mapping.
 
-The implementation logs condition-wise response performance and supports human, QA, scripted simulation, and sampler simulation execution profiles through dedicated config files.
+The implementation computes trial transitions (`switch/repeat`) online and records accuracy, reaction time, timeout behavior, and cumulative score, enabling direct switch-cost analysis.
 
 ## 2. Task Flow
 
@@ -28,35 +28,39 @@ The implementation logs condition-wise response performance and supports human, 
 
 | Step | Description |
 |---|---|
-| 1. Prepare block | A block condition schedule is loaded into `BlockUnit`. |
-| 2. Run trials | `run_trial(...)` executes cue, anticipation, target, and feedback phases. |
-| 3. Show block summary | Block accuracy and score are shown. |
-| 4. End task | Final score summary is shown at experiment completion. |
+| 1. Block init | Controller resets block counters and transition history. |
+| 2. Trial loop | `run_trial(...)` executes fixation, cue, decision, feedback, and ITI for each trial. |
+| 3. Block summary | Display accuracy, switch/repeat accuracy, mean RT, switch cost, and score. |
+| 4. Final summary | Display session-level switching metrics and final score. |
 
 ### Trial-Level Flow
 
 | Step | Description |
 |---|---|
-| Cue | Condition-specific cue (`repeat`, `switch`, `mixed`) is shown. |
-| Anticipation | Fixation phase with response monitoring. |
-| Target | Condition-specific target appears with key capture. |
-| Pre-feedback fixation | Brief fixation interval before feedback. |
-| Feedback | Hit/miss feedback and score delta are shown. |
+| `fixation` | Jittered fixation baseline before cue. |
+| `cue` | Show active rule and trial transition tag (`起始/重复/切换`). |
+| `decision` | Present one digit and capture `F/J` response under current rule. |
+| `feedback` | Show correct/incorrect/timeout feedback with score update. |
+| `iti` | Jittered inter-trial fixation. |
 
 ### Controller Logic
 
 | Component | Description |
 |---|---|
-| Adaptive target duration | Controller adjusts target duration toward target accuracy. |
-| Condition tracking | Per-condition histories are updated after each trial. |
-| Accuracy-linked scoring | Feedback state reflects trial hit/miss outcome. |
+| Rule transition sampling | Controller samples current rule based on `switch_probability`, then derives `trial_type`. |
+| Target generation | Digit target sampled from `[1,2,3,4,6,7,8,9]`. |
+| Scoring | Correct `+1`, incorrect `-1`, timeout `0`. |
+| Metrics | Supports accuracy/RT for overall, switch, repeat, and switch-cost derivation. |
 
 ### Runtime Context Phases
 
 | Phase Label | Meaning |
 |---|---|
-| `anticipation` | Pre-target response-monitoring period. |
-| `target` | Main response window for target stimulus. |
+| `fixation` | Pre-trial baseline. |
+| `cue` | Rule cue preparation stage. |
+| `decision` | Active response window for digit categorization. |
+| `feedback` | Outcome feedback stage. |
+| `iti` | Inter-trial transition stage. |
 
 ## 3. Configuration Summary
 
@@ -73,34 +77,61 @@ The implementation logs condition-wise response performance and supports human, 
 | `size` | `[1280, 720]` |
 | `units` | `pix` |
 | `screen` | `0` |
-| `bg_color` | `gray` |
+| `bg_color` | `black` |
 | `fullscreen` | `false` |
 | `monitor_width_cm` | `35.5` |
 | `monitor_distance_cm` | `60` |
 
 ### c. Stimuli
 
-| Name | Type | Description |
-|---|---|---|
-| `repeat_cue`, `switch_cue`, `mixed_cue` | text | Condition cue prompts. |
-| `repeat_target`, `switch_target`, `mixed_target` | text | Condition targets for response capture. |
-| `*_hit_feedback`, `*_miss_feedback` | text | Condition-specific feedback text. |
-| `fixation`, `block_break`, `good_bye` | text | Shared fixation and summary screens. |
+| Stimulus Group | Description |
+|---|---|
+| `cue_parity`, `cue_magnitude`, `trial_type_tag` | Rule cue and transition label stimuli. |
+| Runtime `target_digit` | Single large digit target rendered during decision phase. |
+| `rule_prompt`, `key_hint` | Rule-specific response mapping prompts. |
+| `feedback_correct`, `feedback_incorrect`, `feedback_timeout` | Outcome-dependent feedback texts. |
+| `instruction_text`, `score_text`, `block_break`, `good_bye`, `fixation` | Envelope and summary stimuli. |
 
 ### d. Timing
 
-| Phase | Duration |
+| Stage | Duration |
 |---|---|
-| cue | 0.5 s |
-| anticipation | 1.0 s |
-| prefeedback | 0.4 s |
-| feedback | 0.8 s |
-| target | adaptive via controller (`0.08`-`0.40` s bounds) |
+| fixation | jittered (`[0.3, 0.6] s`) |
+| cue | fixed (`0.6 s`) |
+| decision | deadline (`2.0 s`) |
+| feedback | fixed (`0.8 s`) |
+| iti | jittered (`[0.3, 0.6] s`) |
+
+### e. Triggers
+
+| Trigger | Code |
+|---|---:|
+| `exp_onset` | 1 |
+| `exp_end` | 2 |
+| `block_onset` | 10 |
+| `block_end` | 11 |
+| `fixation_onset` | 20 |
+| `cue_onset` | 30 |
+| `decision_onset` | 40 |
+| `choice_left` | 41 |
+| `choice_right` | 42 |
+| `choice_timeout` | 43 |
+| `feedback_correct` | 50 |
+| `feedback_incorrect` | 51 |
+| `feedback_timeout` | 52 |
+| `iti_onset` | 60 |
+
+### f. Adaptive Controller
+
+| Parameter Group | Description |
+|---|---|
+| `switch_probability` | Controls likelihood of rule switch vs repeat on each trial. |
+| `digit_pool` | Candidate target digits used for categorization. |
+| `score_deltas` | Signed score update policy for correct/incorrect/timeout trials. |
+| `random_seed` | Enables deterministic QA/sim behavior when set. |
 
 ## 4. Methods (for academic publication)
 
-Participants completed a task-switching protocol with repeat, switch, and mixed condition trials. Each trial contained condition cueing, a brief anticipation period, a response window for the target, and immediate feedback.
+Participants completed a cued task-switching paradigm in which each trial provided an explicit rule cue followed by a single digit requiring binary categorization. Rule transitions were sampled online to create repeat and switch trials, enabling estimation of switching-specific performance costs.
 
-The procedure supports estimation of condition-wise performance under switching demands using accuracy and response timing logs. The adaptive controller maintains target difficulty by adjusting response-window duration according to recent trial outcomes.
-
-The task emits explicit trigger events for cue, anticipation, target, response, and feedback stages to support synchronized acquisition contexts.
+Trial-level outputs include task rule, transition type, target digit, response, correctness, reaction time, timeout status, and cumulative score. The implementation emits trigger-aligned phase events (`fixation`, `cue`, `decision`, `feedback`, `iti`) for reproducible behavioral and synchronized acquisition workflows.

@@ -1,23 +1,21 @@
-subinfo_fields:
-- name: subject_id
-  type: int
-  constraints:
-    min: 101
-    max: 999
-    digits: 3
+﻿subinfo_fields:
+  - name: subject_id
+    type: int
+    constraints:
+      min: 101
+      max: 999
+      digits: 3
 subinfo_mapping:
-  subject_id: 被试编号（3位）
+  subject_id: 受试者编号（3位）
   Participant Information: 被试信息
   registration_failed: 注册失败
   registration_successful: 注册成功
-  invalid_input: '{field} 输入无效'
+  invalid_input: "{field} 输入无效"
 window:
-  size:
-  - 1280
-  - 720
+  size: [1280, 720]
   units: pix
   screen: 0
-  bg_color: gray
+  bg_color: black
   fullscreen: false
   monitor_width_cm: 35.5
   monitor_distance_cm: 60
@@ -25,155 +23,189 @@ task:
   task_name: task_switching
   save_path: ./outputs/qa
   total_blocks: 1
-  total_trials: 9
-  trial_per_block: 9
+  total_trials: 24
+  trial_per_block: 24
   conditions:
-  - repeat
-  - switch
-  - mixed
-  key_list: &id001
-  - f
-  - j
-  - space
+    - cued_switching
+  key_list: &allowed_keys
+    - f
+    - j
+    - space
+  left_key: f
+  right_key: j
   seed_mode: same_across_sub
   delta: 1
   language: Chinese
   voice_name: zh-CN-YunyangNeural
   voice_enabled: false
 timing:
-  cue_duration: 0.5
-  anticipation_duration: 1.0
-  prefeedback_duration: 0.4
+  fixation_duration: [0.3, 0.6]
+  cue_duration: 0.6
+  decision_deadline: 2.0
   feedback_duration: 0.8
+  iti_duration: [0.3, 0.6]
 stimuli:
-  fixation:
-    type: text
-    text: +
-    color: white
-    height: 48
-    font: SimHei
   instruction_text:
     type: text
-    text: '任务切换任务
+    text: |
+      任务切换实验
 
+      每轮会先出现规则线索，然后呈现一个数字。
 
-      每轮先出现规则线索，再出现待分类刺激。
+      规则1：奇偶判断（奇数/偶数）
+      规则2：大小判断（小于5/大于5）
 
-      请根据当前规则作答：F=左侧类别，J=右侧类别。
+      按键规则在每轮会随当前规则显示。
+      请尽快并准确作答。
 
-
-      按空格键开始。'
+      按空格键开始。
     color: white
+    height: 29
+    wrapWidth: 1080
+    pos: [0, 60]
+    font: SimHei
+  fixation:
+    type: text
+    text: "+"
+    color: [0.92, 0.92, 0.92]
+    height: 52
+    pos: [0, 0]
+    font: SimHei
+  cue_title:
+    type: text
+    text: "请准备当前判断规则"
+    color: [0.95, 0.95, 0.92]
+    height: 34
+    wrapWidth: 980
+    pos: [0, 290]
+    font: SimHei
+  score_text:
+    type: text
+    text: "当前得分：{current_score}"
+    color: [0.78, 0.95, 0.86]
+    height: 30
+    pos: [0, 245]
+    font: SimHei
+  cue_parity:
+    type: text
+    text: "规则：奇偶判断"
+    color: [0.90, 0.98, 0.70]
+    height: 48
+    wrapWidth: 900
+    pos: [0, 95]
+    font: SimHei
+  cue_magnitude:
+    type: text
+    text: "规则：大小判断"
+    color: [0.78, 0.90, 1.0]
+    height: 48
+    wrapWidth: 900
+    pos: [0, 95]
+    font: SimHei
+  trial_type_tag:
+    type: text
+    text: "本轮类型：{trial_type_cn}"
+    color: [0.85, 0.85, 0.85]
+    height: 26
+    wrapWidth: 800
+    pos: [0, 20]
+    font: SimHei
+  rule_prompt:
+    type: text
+    text: "当前规则：{rule_name_cn}"
+    color: [0.96, 0.92, 0.62]
+    height: 32
+    wrapWidth: 900
+    pos: [0, -185]
+    font: SimHei
+  key_hint:
+    type: text
+    text: "按键：{left_key}={left_label_cn}，{right_key}={right_label_cn}"
+    color: [0.90, 0.90, 0.90]
     height: 28
     wrapWidth: 980
+    pos: [0, -245]
     font: SimHei
-  repeat_cue:
+  feedback_correct:
     type: text
-    text: 线索：重复规则
-    color: green
-    height: 44
-    wrapWidth: 900
+    text: |
+      正确
+      你的判断：{predicted_category_cn}
+      正确类别：{correct_category_cn}
+      本轮得分变化：{score_delta:+d}
+      当前得分：{score_after}
+    color: [0.70, 0.96, 0.70]
+    height: 30
+    wrapWidth: 980
+    pos: [0, 20]
     font: SimHei
-  switch_cue:
+  feedback_incorrect:
     type: text
-    text: 线索：切换规则
-    color: red
-    height: 44
-    wrapWidth: 900
+    text: |
+      错误
+      你的判断：{predicted_category_cn}
+      正确类别：{correct_category_cn}
+      本轮得分变化：{score_delta:+d}
+      当前得分：{score_after}
+    color: [1.0, 0.78, 0.62]
+    height: 30
+    wrapWidth: 980
+    pos: [0, 20]
     font: SimHei
-  mixed_cue:
+  feedback_timeout:
     type: text
-    text: 线索：混合规则
-    color: yellow
-    height: 44
-    wrapWidth: 900
-    font: SimHei
-  repeat_target:
-    type: text
-    text: '请按当前规则分类
-
-      F=左侧类别   J=右侧类别'
-    color: white
-    height: 54
-    wrapWidth: 900
-    font: SimHei
-  switch_target:
-    type: text
-    text: '请按当前规则分类
-
-      F=左侧类别   J=右侧类别'
-    color: white
-    height: 54
-    wrapWidth: 900
-    font: SimHei
-  mixed_target:
-    type: text
-    text: '请按当前规则分类
-
-      F=左侧类别   J=右侧类别'
-    color: white
-    height: 54
-    wrapWidth: 900
-    font: SimHei
-  repeat_hit_feedback:
-    type: text
-    text: 反应已记录
-    color: green
-    height: 42
-    font: SimHei
-  repeat_miss_feedback:
-    type: text
-    text: 未在时限内作答
-    color: red
-    height: 42
-    font: SimHei
-  switch_hit_feedback:
-    type: text
-    text: 反应已记录
-    color: green
-    height: 42
-    font: SimHei
-  switch_miss_feedback:
-    type: text
-    text: 未在时限内作答
-    color: red
-    height: 42
-    font: SimHei
-  mixed_hit_feedback:
-    type: text
-    text: 反应已记录
-    color: green
-    height: 42
-    font: SimHei
-  mixed_miss_feedback:
-    type: text
-    text: 未在时限内作答
-    color: red
-    height: 42
+    text: |
+      本轮超时
+      当前规则：{rule_name_cn}
+      正确类别：{correct_category_cn}
+      当前得分：{score_after}
+    color: [1.0, 0.50, 0.50]
+    height: 30
+    wrapWidth: 980
+    pos: [0, 20]
     font: SimHei
   block_break:
     type: text
-    text: '区块 {block_num}/{total_blocks}
+    text: |
+      第 {block_num}/{total_blocks} 组完成
 
-      记录率：{accuracy:.2%}
+      准确率：{accuracy:.1%}
+      切换试次准确率：{switch_accuracy:.1%}
+      重复试次准确率：{repeat_accuracy:.1%}
+      平均反应时：{mean_rt_ms:.0f} ms
+      切换代价（RT）：{switch_cost_ms:+.0f} ms
+      超时次数：{timeout_count}
+      本组净得分：{net_score:+d}
+      当前总得分：{score_end}
 
-      当前分数：{total_score}
-
-
-      按空格键继续'
+      按空格键继续。
     color: white
-    height: 24
-    wrapWidth: 900
+    height: 25
+    wrapWidth: 1100
+    pos: [0, 0]
     font: SimHei
   good_bye:
     type: text
-    text: '任务结束，最终分数：{total_score}
+    text: |
+      任务结束
 
+      总试次数：{total_trials}
+      总体准确率：{accuracy:.1%}
+      切换试次准确率：{switch_accuracy:.1%}
+      重复试次准确率：{repeat_accuracy:.1%}
+      平均反应时：{mean_rt_ms:.0f} ms
+      切换试次平均RT：{mean_switch_rt_ms:.0f} ms
+      重复试次平均RT：{mean_repeat_rt_ms:.0f} ms
+      切换代价（RT）：{switch_cost_ms:+.0f} ms
+      超时次数：{timeout_count}
+      总净得分：{net_score:+d}
+      最终得分：{score_end}
 
-      按空格键退出'
+      按空格键退出。
     color: white
-    height: 28
-    wrapWidth: 900
+    height: 25
+    wrapWidth: 1100
+    pos: [0, 0]
     font: SimHei
 triggers:
   map:
@@ -181,27 +213,16 @@ triggers:
     exp_end: 2
     block_onset: 10
     block_end: 11
-    repeat_cue_onset: 20
-    switch_cue_onset: 21
-    mixed_cue_onset: 22
-    repeat_anti_onset: 30
-    switch_anti_onset: 31
-    mixed_anti_onset: 32
-    repeat_target_onset: 40
-    switch_target_onset: 41
-    mixed_target_onset: 42
-    repeat_key_press: 50
-    switch_key_press: 51
-    mixed_key_press: 52
-    repeat_no_response: 60
-    switch_no_response: 61
-    mixed_no_response: 62
-    repeat_hit_fb_onset: 70
-    repeat_miss_fb_onset: 71
-    switch_hit_fb_onset: 72
-    switch_miss_fb_onset: 73
-    mixed_hit_fb_onset: 74
-    mixed_miss_fb_onset: 75
+    fixation_onset: 20
+    cue_onset: 30
+    decision_onset: 40
+    choice_left: 41
+    choice_right: 42
+    choice_timeout: 43
+    feedback_correct: 50
+    feedback_incorrect: 51
+    feedback_timeout: 52
+    iti_onset: 60
   driver:
     type: serial_url
     url: loop://
@@ -211,28 +232,32 @@ triggers:
   policy:
     strict: false
 controller:
-  initial_duration: 0.25
-  min_duration: 0.08
-  max_duration: 0.4
-  step: 0.02
-  target_accuracy: 0.66
-  condition_specific: true
+  switch_probability: 0.5
+  digit_pool: [1, 2, 3, 4, 6, 7, 8, 9]
+  initial_score: 0
+  correct_delta: 1
+  incorrect_delta: -1
+  timeout_delta: 0
+  random_seed: 0
   enable_logging: true
 qa:
   output_dir: outputs/qa
   enable_scaling: true
-  timing_scale: 0.1
+  timing_scale: 0.12
   min_frames: 1
   strict: false
   max_wait_s: 10.0
   acceptance_criteria:
     required_columns:
-    - condition
-    - block_id
-    - trial_index
-    - target_key_press
-    - target_response
-    - target_rt
-    expected_trial_count: 9
-    allowed_keys: *id001
+      - condition
+      - trial_id
+      - task_rule
+      - trial_type
+      - target_digit
+      - decision_response
+      - decision_rt
+      - is_correct
+      - score_after
+    expected_trial_count: 24
+    allowed_keys: *allowed_keys
     triggers_required: true

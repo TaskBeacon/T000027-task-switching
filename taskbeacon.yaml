@@ -1,4 +1,4 @@
-id: T000027
+﻿id: T000027
 slug: task-switching
 title: Task Switching Task
 acquisition: behavior
@@ -6,14 +6,13 @@ variant: baseline
 cognitive_domain: []
 maturity: draft
 version:
-  release_tag: v0.1.1-dev
+  release_tag: v0.2.0-dev
 contracts:
   psyflow_taps: v0.1.0
 evidence:
-- W2134305330
-- W2144421443
-- W2154562678
-- W2163605009
-- W2087484885
-- W2295598076
+  - W2154099072
+  - W2080507226
+  - W2023626050
+  - W1969112442
+  - W2312817634
 maintainer: []

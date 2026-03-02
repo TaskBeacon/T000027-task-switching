@@ -1,45 +1,24 @@
-# Parameter Mapping
+﻿# Parameter Mapping
 
 | Parameter | Implemented Value | Source Paper ID | Confidence | Rationale |
 |---|---|---|---|---|
-| `task.conditions` | `['repeat', 'switch', 'mixed']` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `task.delta` | `1` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `task.key_list` | `['f', 'j', 'space']` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `task.language` | `Chinese` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `task.save_path` | `./outputs/human` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `task.seed_mode` | `same_across_sub` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `task.task_name` | `task_switching` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `task.total_blocks` | `3` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `task.total_trials` | `72` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `task.trial_per_block` | `24` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `task.voice_enabled` | `False` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `task.voice_name` | `zh-CN-YunyangNeural` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `timing.anticipation_duration` | `1.0` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `timing.cue_duration` | `0.5` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `timing.feedback_duration` | `0.8` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `timing.prefeedback_duration` | `0.4` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.block_end` | `11` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.block_onset` | `10` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.exp_end` | `2` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.exp_onset` | `1` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.mixed_anti_onset` | `32` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.mixed_cue_onset` | `22` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.mixed_hit_fb_onset` | `74` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.mixed_key_press` | `52` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.mixed_miss_fb_onset` | `75` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.mixed_no_response` | `62` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.mixed_target_onset` | `42` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.repeat_anti_onset` | `30` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.repeat_cue_onset` | `20` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.repeat_hit_fb_onset` | `70` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.repeat_key_press` | `50` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.repeat_miss_fb_onset` | `71` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.repeat_no_response` | `60` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.repeat_target_onset` | `40` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.switch_anti_onset` | `31` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.switch_cue_onset` | `21` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.switch_hit_fb_onset` | `72` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.switch_key_press` | `51` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.switch_miss_fb_onset` | `73` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.switch_no_response` | `61` | `W2134305330` | `inferred` | Mapped from selected protocol references |
-| `triggers.map.switch_target_onset` | `41` | `W2134305330` | `inferred` | Mapped from selected protocol references |
+| `task.conditions` | `['cued_switching']` | `W2023626050` | `supported` | Cued task-switching is implemented as one paradigm stream with within-stream switch/repeat transitions. |
+| `task.key_list` | `['f', 'j', 'space']` | `W1969112442` | `inferred` | Binary decision mapping aligns with two-category responses under each active rule. |
+| `task.total_blocks` | `2` | `W2080507226` | `inferred` | Multi-block design enables stable switch/repeat estimates while preserving manageable run length. |
+| `task.trial_per_block` | `48` | `W2023626050` | `inferred` | Sufficient trial count for reliable switch-cost estimation in behavioral runs. |
+| `timing.fixation_duration` | `[0.3, 0.6]` | `W2154099072` | `inferred` | Jittered fixation reduces temporal expectancy and separates trial events. |
+| `timing.cue_duration` | `0.6` | `W2023626050` | `inferred` | Distinct cue interval supports rule preparation before target processing. |
+| `timing.decision_deadline` | `2.0` | `W1969112442` | `inferred` | Bounded response window yields timeout-sensitive cognitive control metrics. |
+| `timing.feedback_duration` | `0.8` | `W2080507226` | `inferred` | Brief explicit correctness feedback supports performance monitoring. |
+| `controller.switch_probability` | `0.5` | `W2023626050` | `inferred` | Balanced switch/repeat sampling approximates canonical mixed-task-switching sequences. |
+| `controller.digit_pool` | `[1,2,3,4,6,7,8,9]` | `W2312817634` | `inferred` | Excludes ambiguous midpoint value and supports parity/magnitude dual-rule mapping. |
+| `controller.correct_delta` | `+1` | `W2080507226` | `inferred` | Signed score updates provide transparent trial-level performance feedback. |
+| `controller.incorrect_delta` | `-1` | `W2080507226` | `inferred` | Symmetric penalty keeps cumulative score sensitive to switch-related errors. |
+| `controller.timeout_delta` | `0` | `W2080507226` | `inferred` | Timeout is behaviorally logged without reward bias. |
+| `triggers.map.cue_onset` | `30` | `W2154099072` | `inferred` | Explicit cue-stage marker for cue-based preparation analysis. |
+| `triggers.map.decision_onset` | `40` | `W2154099072` | `inferred` | Isolates decision epoch from preparatory cue epoch. |
+| `triggers.map.choice_left` | `41` | `W1969112442` | `inferred` | Captures response identity under dynamic rule mapping. |
+| `triggers.map.choice_right` | `42` | `W1969112442` | `inferred` | Captures response identity under dynamic rule mapping. |
+| `triggers.map.feedback_correct` | `50` | `W2080507226` | `inferred` | Outcome-specific feedback marker for monitoring effects. |
+| `triggers.map.feedback_incorrect` | `51` | `W2080507226` | `inferred` | Outcome-specific feedback marker for monitoring effects. |
+| `triggers.map.feedback_timeout` | `52` | `W2080507226` | `inferred` | Timeout feedback marker for omission analysis. |
