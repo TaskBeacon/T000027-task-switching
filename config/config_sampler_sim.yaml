@@ -38,6 +38,20 @@ task:
   language: Chinese
   voice_name: zh-CN-YunyangNeural
   voice_enabled: false
+  rule_names:
+    parity: 奇偶判断
+    magnitude: 大小判断
+  trial_type_names:
+    start: 起始
+    repeat: 重复
+    switch: 切换
+  response_labels:
+    parity:
+      left: 奇数
+      right: 偶数
+    magnitude:
+      left: 小于5
+      right: 大于5
 timing:
   fixation_duration: [0.3, 0.6]
   cue_duration: 0.6
@@ -125,6 +139,14 @@ stimuli:
     height: 28
     wrapWidth: 980
     pos: [0, -245]
+    font: SimHei
+  target_digit:
+    type: text
+    text: "0"
+    color: [0.98, 0.98, 0.98]
+    height: 120
+    wrapWidth: 600
+    pos: [0, 10]
     font: SimHei
   feedback_correct:
     type: text

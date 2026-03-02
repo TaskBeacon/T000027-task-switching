@@ -1,97 +1,65 @@
-﻿task_id: T000027
+task_id: T000027
 generated_at: '2026-02-19T19:05:00Z'
-selection_policy: openalex_filter_plus_manual_curation
+selection_policy: manual_curation_literature_first
 citation_threshold: 100
 papers:
   - id: W2154099072
     title: The role of prefrontal cortex and posterior parietal cortex in task switching
-    authors:
-      - Myeong-Ho Sohn
-      - Stefan Ursu
-      - John R. Anderson
-      - V. Andrew Stenger
-      - Cameron S. Carter
     year: 2000
     journal: Proceedings of the National Academy of Sciences
     doi_or_url: https://doi.org/10.1073/pnas.240460497
     citation_count: 555
-    is_high_impact: true
     open_access: true
+    is_high_impact: true
     used_for:
       - task_workflow
       - cue_preparation_logic
       - trigger_planning
-    parameter_bindings: {}
-    notes: Neural evidence for cue-based task-switching and control-network involvement.
   - id: W2080507226
-    title: The role of inhibition in task switching: A review
-    authors:
-      - Iring Koch
-      - Miriam Gade
-      - Stefanie Schuch
-      - Andrea M. Philipp
+    title: "The role of inhibition in task switching: A review"
     year: 2010
     journal: Psychonomic Bulletin & Review
     doi_or_url: https://doi.org/10.3758/pbr.17.1.1
     citation_count: 495
-    is_high_impact: false
     open_access: true
+    is_high_impact: false
     used_for:
       - task_workflow
       - performance_metrics
       - scoring_policy
-    parameter_bindings: {}
-    notes: Review-level constraints for switch-cost and inhibition-related metrics.
   - id: W2023626050
     title: Task-set reconfiguration with predictable and unpredictable task switches
-    authors:
-      - Stephen Monsell
-      - Petroc Sumner
-      - Helen Waters
     year: 2003
     journal: Memory & Cognition
-    doi_or_url: https://doi.org/10.3758/bf03194391
+    doi_or_url: https://doi.org/10.3758/BF03194391
     citation_count: 267
-    is_high_impact: false
     open_access: true
+    is_high_impact: false
     used_for:
       - switch_repeat_design
       - cue_timing_design
       - trial_structure
-    parameter_bindings: {}
-    notes: Core evidence for predictable/unpredictable switching effects and reconfiguration costs.
   - id: W1969112442
     title: Cue-based preparation and stimulus-based priming of tasks in task switching
-    authors:
-      - Iring Koch
-      - Alan Allport
     year: 2006
     journal: Memory & Cognition
-    doi_or_url: https://doi.org/10.3758/bf03193420
+    doi_or_url: https://doi.org/10.3758/BF03193420
     citation_count: 237
-    is_high_impact: false
     open_access: true
+    is_high_impact: false
     used_for:
       - cue_stimulus_separation
       - response_mapping
       - timeout_policy
-    parameter_bindings: {}
-    notes: Supports separation between cue preparation and stimulus processing phases.
   - id: W2312817634
-    title: What’s easier: Doing what you want, or being told what to do? Cued versus voluntary language and task switching.
-    authors:
-      - Tamar H. Gollan
-      - Daniel Kleinman
-      - Christina E. Wierenga
+    title: "What's easier: Doing what you want, or being told what to do? Cued versus voluntary language and task switching"
     year: 2014
-    journal: Journal of Experimental Psychology General
+    journal: "Journal of Experimental Psychology: General"
     doi_or_url: https://doi.org/10.1037/a0038006
     citation_count: 144
-    is_high_impact: true
     open_access: true
+    is_high_impact: true
     used_for:
       - cued_switching_protocol
       - task_rule_representation
       - response_metrics
-    parameter_bindings: {}
-    notes: High-impact cue-driven switching evidence with experimentally explicit task rules.

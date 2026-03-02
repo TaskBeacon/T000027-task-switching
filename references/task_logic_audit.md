@@ -1,171 +1,116 @@
-﻿# Task Logic Audit: Task Switching Task
+# Task Logic Audit: Task Switching Task
 
 ## 1. Paradigm Intent
 
-- Task: `task_switching`
-- Primary construct: cognitive flexibility in cued rule switching.
-- Manipulated factors:
-  - task rule (`parity` vs `magnitude`)
-  - transition type (`switch` vs `repeat`), defined relative to prior trial rule
-- Dependent measures:
-  - decision accuracy (overall / switch / repeat)
-  - decision reaction time (overall / switch / repeat)
-  - switch cost (`RT_switch - RT_repeat`)
-  - timeout count
-  - cumulative score trajectory
-- Key citations:
-  - `W2154099072`
-  - `W2080507226`
-  - `W2023626050`
-  - `W1969112442`
-  - `W2312817634`
+- Task: `task_switching`.
+- Construct: cognitive flexibility under cue-driven task-set reconfiguration.
+- Manipulated trial factors:
+- active rule (`parity` vs `magnitude`)
+- transition type (`start`, `repeat`, `switch`)
+- Primary dependent measures:
+- decision accuracy (overall/switch/repeat)
+- decision RT (overall/switch/repeat)
+- switch cost (`RT_switch - RT_repeat`)
+- timeout count and running score.
 
 ## 2. Block/Trial Workflow
 
 ### Block Structure
 
-- Total blocks: `2` (human baseline), `1` (QA/sim profiles).
-- Trials per block: `48` (human baseline), `24` (QA/sim profiles).
-- Randomization/counterbalancing:
-  - trial rule sampled online from controller using `switch_probability`
-  - `switch/repeat` is derived from rule transition against previous trial
-  - digit target sampled from pool `[1,2,3,4,6,7,8,9]`
+- Human profile: `2` blocks x `48` trials.
+- QA/sim profiles: `1` block x `24` trials.
+- Block setup uses `Controller.start_block(block_idx)` to reset transition history.
+- Trial specification uses `Controller.build_trial()` to sample rule/transition/digit.
 
 ### Trial State Machine
 
 1. `fixation`
-   - Onset trigger: `fixation_onset`
-   - Stimuli shown: central fixation (`+`)
-   - Valid keys: `[]`
-   - Timeout behavior: auto-advance after jittered fixation duration
-   - Next state: `cue`
+- Stimulus: `fixation`.
+- Trigger: `fixation_onset`.
+- Keys: none.
 
 2. `cue`
-   - Onset trigger: `cue_onset`
-   - Stimuli shown together:
-     - cue title
-     - current score
-     - rule cue (`奇偶判断` or `大小判断`)
-     - trial-type tag (`起始/重复/切换`)
-   - Valid keys: `[]`
-   - Timeout behavior: auto-advance after fixed cue duration
-   - Next state: `decision`
+- Stimuli: `cue_title`, `score_text`, rule cue (`cue_parity` or `cue_magnitude`), `trial_type_tag`.
+- Trigger: `cue_onset`.
+- Keys: none.
 
 3. `decision`
-   - Onset trigger: `decision_onset`
-   - Stimuli shown together:
-     - current score text
-     - rule prompt
-     - key mapping hint for current rule
-     - single target digit
-   - Valid keys: `[left_key, right_key]` (default `F/J`)
-   - Response triggers:
-     - `choice_left`
-     - `choice_right`
-   - Timeout trigger: `choice_timeout`
-   - Timeout behavior: no decision response recorded; proceed to timeout feedback
-   - Next state: `feedback`
+- Stimuli: `score_text`, `target_digit`, `rule_prompt`, `key_hint`.
+- Trigger: `decision_onset`.
+- Response triggers: `choice_left` / `choice_right`.
+- Timeout trigger: `choice_timeout`.
 
 4. `feedback`
-   - Onset trigger (outcome-dependent):
-     - `feedback_correct`
-     - `feedback_incorrect`
-     - `feedback_timeout`
-   - Stimuli shown:
-     - correctness feedback with predicted/true category and score update, or
-     - timeout feedback with true category and score
-   - Valid keys: `[]`
-   - Timeout behavior: auto-advance after feedback duration
-   - Next state: `iti`
+- Stimulus branch: `feedback_correct` or `feedback_incorrect` or `feedback_timeout`.
+- Trigger branch: `feedback_correct` / `feedback_incorrect` / `feedback_timeout`.
+- Keys: none.
 
-5. `iti`
-   - Onset trigger: `iti_onset`
-   - Stimuli shown: fixation (`+`)
-   - Valid keys: `[]`
-   - Timeout behavior: auto-advance after jittered ITI
-   - Next state: next trial
+5. `inter_trial_interval`
+- Stimulus: `fixation`.
+- Trigger: `iti_onset`.
+- Keys: none.
 
 ## 3. Condition Semantics
 
-- Condition ID: `cued_switching`
-  - Participant-facing meaning: each trial uses an explicit rule cue, then participant categorizes one digit under that rule.
-  - Concrete stimulus realization:
-    - rule cue text (`规则：奇偶判断` / `规则：大小判断`)
-    - single large digit target in center
-    - dynamic key hint tied to current rule
-  - Outcome rules:
-    - parity rule: odd vs even
-    - magnitude rule: less-than-5 vs greater-than-5
-    - correctness based on rule-consistent category mapping
-    - switch/repeat tag computed from current vs previous rule
+- Runtime condition ID: `cued_switching`.
+- Trial-level semantics are derived each trial:
+- `task_rule`: `parity` or `magnitude`.
+- `trial_type`: `start` on first trial, then `switch` or `repeat` relative to previous rule.
+- `target_digit`: sampled from `[1,2,3,4,6,7,8,9]`.
 
 ## 4. Response and Scoring Rules
 
-- Response mapping (default):
-  - left key (`F`) selects left category label
-  - right key (`J`) selects right category label
-- Rule-specific category mapping:
-  - parity: `F=奇数`, `J=偶数`
-  - magnitude: `F=小于5`, `J=大于5`
-- Missing-response policy:
-  - timeout emits `choice_timeout`
-  - timeout trial uses `timeout_delta` (configured as `0`)
-- Correctness logic:
-  - `is_correct = (response_key == correct_key)` when responded
-- Score updates:
-  - correct: `+1`
-  - incorrect: `-1`
-  - timeout: `0`
-- Running metrics:
-  - accuracy by transition type
-  - RT by transition type
-  - switch cost in milliseconds
-  - timeout count and cumulative score
+- Valid decision keys: `left_key` and `right_key` (default `f`/`j`).
+- Rule-dependent correctness:
+- parity rule: odd -> left, even -> right.
+- magnitude rule: `<5` -> left, `>5` -> right.
+- Timeout sets `is_correct = null` and applies `timeout_delta`.
+- Score updates via controller:
+- correct: `+1`
+- incorrect: `-1`
+- timeout: `0`
 
 ## 5. Stimulus Layout Plan
 
-- Cue screen (`cue`):
-  - `cue_title` at top center (`0, 290`)
-  - `score_text` below title (`0, 245`)
-  - rule cue text centered (`0, 95`)
-  - trial-type tag below cue (`0, 20`)
+- Cue stage:
+- `cue_title` at top (`0, 290`), `score_text` below (`0, 245`), rule cue center (`0, 95`), transition tag (`0, 20`).
 
-- Decision screen (`decision`):
-  - `score_text` top area (`0, 245`)
-  - `rule_prompt` lower center (`0, -185`)
-  - `key_hint` below rule prompt (`0, -245`)
-  - target digit centered (`0, 10`), large font for salience
+- Decision stage:
+- `score_text` top (`0, 245`), `target_digit` center (`0, 10`), `rule_prompt` lower (`0, -185`), `key_hint` (`0, -245`).
 
-- Feedback screen (`feedback`):
-  - centered multiline outcome text (`wrapWidth <= 980`)
+- Feedback stage:
+- centered multiline text (`wrapWidth: 980`).
 
-All participant-facing text is Chinese and uses `font: SimHei`.
+All participant-facing labels are sourced from config (`stimuli.*` and `task.rule_names` / `task.response_labels` / `task.trial_type_names`).
 
 ## 6. Trigger Plan
 
-| Trigger | Code | Semantics |
+| Trigger | Code | Meaning |
 |---|---:|---|
 | `exp_onset` | 1 | experiment start |
 | `exp_end` | 2 | experiment end |
 | `block_onset` | 10 | block start |
 | `block_end` | 11 | block end |
 | `fixation_onset` | 20 | fixation onset |
-| `cue_onset` | 30 | rule cue onset |
-| `decision_onset` | 40 | decision screen onset |
-| `choice_left` | 41 | left-key response |
-| `choice_right` | 42 | right-key response |
+| `cue_onset` | 30 | cue onset |
+| `decision_onset` | 40 | decision onset |
+| `choice_left` | 41 | left response |
+| `choice_right` | 42 | right response |
 | `choice_timeout` | 43 | no response before deadline |
 | `feedback_correct` | 50 | correct feedback onset |
 | `feedback_incorrect` | 51 | incorrect feedback onset |
 | `feedback_timeout` | 52 | timeout feedback onset |
 | `iti_onset` | 60 | ITI onset |
 
-## 7. Inference Log
+## 7. Architecture Decisions (Auditability)
 
-- Decision: represent task switching as one runtime condition (`cued_switching`) with trial-level transition coding (`switch/repeat`).
-- Why inference was required: task-switching literature manipulates within-task rule transitions rather than independent block condition labels.
-- Citation-supported rationale: selected task-switching papers quantify performance using transition-type costs, consistent with this implementation.
+- `main.py` now follows the standardized single execution path for `human|qa|sim` with shared init order and mode-specific runtime context.
+- `src/run_trial.py` implements task-switching-specific phases and removes MID leftovers (`anticipation`, `target`, `hit/miss` template flow).
+- Decision response triggers are emitted explicitly (`choice_left`/`choice_right`) after response-key mapping, while timeout remains capture-policy driven.
+- QA-required outputs (`condition`, `trial_id`, `task_rule`, `trial_type`, `target_digit`, `decision_response`, `decision_rt`, `is_correct`, `score_after`) are written each trial.
 
-- Decision: use explicit Chinese textual cues for rule identity and dynamic key-hint overlays each trial.
-- Why inference was required: publications vary between symbolic and textual cue designs.
-- Citation-supported rationale: preserves core cue-based preparation and response-selection mechanisms while keeping participant instructions unambiguous.
+## 8. Inference Log
+
+- Exact cue/fixation/ITI durations are inferred implementation parameters selected to satisfy phase separation and practical runtime constraints.
+- `switch_probability = 0.5` is an inferred balancing choice to stabilize switch/repeat estimates, not a strict value mandated by any single source.
+- Chinese localization strings were moved into config dictionaries to satisfy language-generic runtime contracts while preserving the same task logic.

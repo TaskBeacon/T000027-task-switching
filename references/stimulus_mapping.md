@@ -1,14 +1,12 @@
-﻿# Stimulus Mapping
+# Stimulus Mapping
 
-Task: `Task Switching Task`
+## Mapping Table
 
-| Condition | Implemented Stimulus IDs | Source Paper ID | Evidence (quote/figure/table) | Implementation Mode | Notes |
-|---|---|---|---|---|---|
-| `cued_switching` | `cue_parity`, `cue_magnitude`, `trial_type_tag`, `rule_prompt`, `key_hint`, runtime digit target (`target_digit`), `feedback_correct`, `feedback_incorrect`, `feedback_timeout`, `fixation` | `W2023626050` | Cued task-switching paradigms separate cue-based preparation and stimulus-driven response stages with measurable switch/repeat costs. | `psychopy_builtin` | Rule cue and digit target are concretely rendered each trial; switch/repeat labels are derived from rule transition. |
-| `response_selection_logic` | dynamic key mapping text and correctness-specific feedback panels | `W1969112442` | Cue-based preparation and stimulus-based processing jointly shape task-switching performance and response mapping effects. | `psychopy_builtin` | Mapping text updates per active rule to prevent ambiguity under rapid switching. |
-| `all_conditions` | `instruction_text`, `score_text`, `block_break`, `good_bye` | `W2080507226` | Task-switching studies report accuracy/RT and switching cost summaries that require explicit task envelope screens. | `psychopy_builtin` | Summary screens expose block/session metrics including switch cost. |
-
-Implementation mode legend:
-- `psychopy_builtin`: stimulus rendered via PsychoPy primitives in config or runtime drawing.
-- `generated_reference_asset`: task-specific synthetic assets generated from reference-described rules.
-- `licensed_external_asset`: externally sourced licensed media with protocol linkage.
+| Condition | Stage/Phase | Stimulus IDs | Participant-Facing Content | Source Paper ID | Evidence (quote/figure/table) | Implementation Mode | Asset References | Notes |
+|---|---|---|---|---|---|---|---|---|
+| `cued_switching` | fixation | `fixation` | Central `+` is shown before cue onset. | W2154099072 | Pre-cue fixation supports separation of preparatory and decision stages. | psychopy_builtin | `config/*.yaml -> stimuli.fixation` | Duration is jittered via controller sampling. |
+| `cued_switching` | cue | `cue_title`, `score_text`, `cue_parity` or `cue_magnitude`, `trial_type_tag` | Rule cue and transition-type tag indicate current control state. | W2023626050 | Cue-based switching depends on explicit rule cues before target response. | psychopy_builtin | `config/*.yaml -> stimuli.cue_* / trial_type_tag / score_text` | Rule and transition labels are localized from config dictionaries. |
+| `cued_switching` | decision | `score_text`, `target_digit`, `rule_prompt`, `key_hint` | Participant categorizes one digit under the cued rule using left/right keys. | W1969112442 | Cue-driven task-set determines category-to-key mapping at response stage. | psychopy_builtin | `config/*.yaml -> stimuli.target_digit / rule_prompt / key_hint` | `target_digit` text is rebuilt each trial with sampled digit. |
+| `cued_switching` | feedback | `feedback_correct`, `feedback_incorrect`, `feedback_timeout` | Outcome panel reports correctness/timeout and running score. | W2080507226 | Outcome-dependent feedback supports monitoring of switch-cost related performance. | psychopy_builtin | `config/*.yaml -> stimuli.feedback_*` | Feedback trigger code depends on outcome branch. |
+| `cued_switching` | inter_trial_interval | `fixation` | Brief fixation separates trials. | W2023626050 | ITI separation helps keep successive cue episodes distinct. | psychopy_builtin | `config/*.yaml -> stimuli.fixation` | Trigger: `iti_onset`. |
+| `all_conditions` | envelope | `instruction_text`, `block_break`, `good_bye` | Instruction and block/final summary screens with accuracy and RT metrics. | W2080507226 | Reporting switch/repeat metrics is central to behavioral interpretation. | psychopy_builtin | `config/*.yaml -> stimuli.instruction_text/block_break/good_bye` | All participant-facing text is config-defined. |
