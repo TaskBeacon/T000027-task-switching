@@ -38,6 +38,10 @@ def _as_bool(value: Any) -> bool:
     return str(value).strip().lower() in {"1", "true", "yes", "y"}
 
 
+def as_dict(value: Any) -> dict:
+    return value if isinstance(value, dict) else {}
+
+
 def _mean(values: list[float]) -> float:
     if not values:
         return 0.0
@@ -66,6 +70,92 @@ def normalize_generated_condition_rows(rows: list[dict[str, Any]]) -> None:
             row["condition"] = str(condition.get("condition", "cued_switching"))
         elif isinstance(condition, (list, tuple)) and condition:
             row["condition"] = str(condition[0])
+
+
+def parse_task_switching_condition(condition: Any) -> dict[str, Any]:
+    """Decode a scheduled task-switching condition."""
+    if isinstance(condition, (list, tuple)) and len(condition) >= 9:
+        (
+            condition_name,
+            condition_id,
+            trial_index,
+            task_rule,
+            trial_type,
+            target_digit,
+            switch_trial,
+            fixation_duration,
+            iti_duration,
+            *_,
+        ) = condition
+        return {
+            "condition": str(condition_name).strip().lower(),
+            "condition_id": str(condition_id),
+            "trial_index": int(trial_index),
+            "task_rule": str(task_rule).strip().lower(),
+            "trial_type": str(trial_type).strip().lower(),
+            "target_digit": int(target_digit),
+            "switch_trial": bool(switch_trial),
+            "fixation_duration": fixation_duration,
+            "iti_duration": iti_duration,
+        }
+    if isinstance(condition, dict):
+        condition_name = str(condition.get("condition", "cued_switching")).strip().lower()
+        return {
+            "condition": condition_name,
+            "condition_id": str(condition.get("condition_id", condition_name)),
+            "trial_index": int(condition.get("trial_index", 1)),
+            "task_rule": str(condition.get("task_rule", "parity")).strip().lower(),
+            "trial_type": str(condition.get("trial_type", "repeat")).strip().lower(),
+            "target_digit": int(condition.get("target_digit", condition.get("digit", 1))),
+            "switch_trial": bool(condition.get("switch_trial", False)),
+            "fixation_duration": condition.get("fixation_duration", None),
+            "iti_duration": condition.get("iti_duration", None),
+        }
+    return {
+        "condition": str(condition).strip().lower(),
+        "condition_id": str(condition).strip().lower(),
+        "trial_index": 1,
+        "task_rule": "parity",
+        "trial_type": "start",
+        "target_digit": 1,
+        "switch_trial": False,
+        "fixation_duration": None,
+        "iti_duration": None,
+    }
+
+
+def task_switching_rule_profile(task_rule: str, target_digit: int, left_key: str, right_key: str, settings) -> dict[str, Any]:
+    """Resolve task rule labels, correct response, and scoring category."""
+    rule_names = as_dict(getattr(settings, "rule_names", {}))
+    response_labels = as_dict(getattr(settings, "response_labels", {}))
+
+    rule_key = "magnitude" if task_rule == "magnitude" else "parity"
+    localized_rule_name = str(rule_names.get(rule_key, rule_key))
+
+    rule_labels = as_dict(response_labels.get(rule_key, {}))
+    if rule_key == "parity":
+        left_label = str(rule_labels.get("left", "odd"))
+        right_label = str(rule_labels.get("right", "even"))
+        is_left_correct = bool(target_digit % 2 == 1)
+        correct_category = "odd" if is_left_correct else "even"
+    else:
+        left_label = str(rule_labels.get("left", "<5"))
+        right_label = str(rule_labels.get("right", ">5"))
+        is_left_correct = bool(target_digit < 5)
+        correct_category = "lt5" if is_left_correct else "gt5"
+
+    correct_key = left_key if is_left_correct else right_key
+    correct_label = left_label if is_left_correct else right_label
+
+    return {
+        "rule": rule_key,
+        "rule_name": localized_rule_name,
+        "left_label": left_label,
+        "right_label": right_label,
+        "correct_key": correct_key,
+        "correct_category": correct_category,
+        "correct_label": correct_label,
+    }
 
 
 def summarize_trials(trials: list[dict], fallback_score: int = 0) -> dict[str, float | int]:
