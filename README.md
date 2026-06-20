@@ -24,6 +24,8 @@ The implementation computes trial transitions (`switch/repeat`) online and recor
 
 ## 2. Task Flow
 
+![Task Flow](task_flow.png)
+
 ### Block-Level Flow
 
 | Step | Description |
