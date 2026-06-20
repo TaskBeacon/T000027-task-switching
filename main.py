@@ -23,7 +23,13 @@ from psyflow import (
     runtime_context,
 )
 
-from src import Controller, run_trial
+from src import (
+    Controller,
+    generate_task_switching_conditions,
+    normalize_generated_condition_rows,
+    run_trial,
+    summarize_trials,
+)
 
 MODES = ("human", "qa", "sim")
 DEFAULT_CONFIG_BY_MODE = {
@@ -31,98 +37,6 @@ DEFAULT_CONFIG_BY_MODE = {
     "qa": "config/config_qa.yaml",
     "sim": "config/config_scripted_sim.yaml",
 }
-
-
-def _as_bool(value) -> bool:
-    if isinstance(value, bool):
-        return value
-    return str(value).strip().lower() in {"1", "true", "yes", "y"}
-
-
-def _as_float(value) -> float | None:
-    try:
-        return float(value)
-    except Exception:
-        return None
-
-
-def _as_int(value, default: int = 0) -> int:
-    try:
-        return int(round(float(value)))
-    except Exception:
-        return int(default)
-
-
-def _mean(values: list[float]) -> float:
-    if not values:
-        return 0.0
-    return float(sum(values) / len(values))
-
-
-def _accuracy(rows: list[dict]) -> float:
-    values = [row.get("is_correct", None) for row in rows if row.get("is_correct", None) is not None]
-    if not values:
-        return 0.0
-    return float(sum(1 for value in values if _as_bool(value)) / len(values))
-
-
-def _decision_rt_s(row: dict) -> float | None:
-    return _as_float(row.get("decision_rt_s", row.get("decision_rt", None)))
-
-
-def _summarize_trials(trials: list[dict], fallback_score: int = 0) -> dict[str, float | int]:
-    if not trials:
-        return {
-            "accuracy": 0.0,
-            "switch_accuracy": 0.0,
-            "repeat_accuracy": 0.0,
-            "timeout_count": 0,
-            "mean_rt_ms": 0.0,
-            "mean_switch_rt_ms": 0.0,
-            "mean_repeat_rt_ms": 0.0,
-            "switch_cost_ms": 0.0,
-            "score_end": int(fallback_score),
-            "net_score": 0,
-        }
-
-    timeout_count = sum(1 for row in trials if _as_bool(row.get("decision_timed_out", False)))
-    responded = [row for row in trials if not _as_bool(row.get("decision_timed_out", False))]
-    switch_rows = [row for row in responded if str(row.get("trial_type", "")).strip().lower() == "switch"]
-    repeat_rows = [row for row in responded if str(row.get("trial_type", "")).strip().lower() == "repeat"]
-
-    rt_values = [_decision_rt_s(row) for row in responded]
-    rt_values = [value for value in rt_values if value is not None]
-    mean_rt_ms = _mean(rt_values) * 1000.0 if rt_values else 0.0
-
-    switch_rt_values = [_decision_rt_s(row) for row in switch_rows]
-    switch_rt_values = [value for value in switch_rt_values if value is not None]
-    mean_switch_rt_ms = _mean(switch_rt_values) * 1000.0 if switch_rt_values else 0.0
-
-    repeat_rt_values = [_decision_rt_s(row) for row in repeat_rows]
-    repeat_rt_values = [value for value in repeat_rt_values if value is not None]
-    mean_repeat_rt_ms = _mean(repeat_rt_values) * 1000.0 if repeat_rt_values else 0.0
-
-    switch_cost_ms = mean_switch_rt_ms - mean_repeat_rt_ms if switch_rt_values and repeat_rt_values else 0.0
-
-    score_end = int(fallback_score)
-    for row in reversed(trials):
-        if row.get("score_after", None) is not None:
-            score_end = _as_int(row.get("score_after"), fallback_score)
-            break
-
-    net_score = sum(_as_int(row.get("score_delta", 0), 0) for row in trials)
-    return {
-        "accuracy": _accuracy(responded),
-        "switch_accuracy": _accuracy(switch_rows),
-        "repeat_accuracy": _accuracy(repeat_rows),
-        "timeout_count": int(timeout_count),
-        "mean_rt_ms": float(mean_rt_ms),
-        "mean_switch_rt_ms": float(mean_switch_rt_ms),
-        "mean_repeat_rt_ms": float(mean_repeat_rt_ms),
-        "switch_cost_ms": float(switch_cost_ms),
-        "score_end": int(score_end),
-        "net_score": int(net_score),
-    }
 
 
 def run(options: TaskRunOptions):
@@ -174,6 +88,7 @@ def run(options: TaskRunOptions):
         settings.controller = cfg["controller_config"]
         settings.save_to_json()
         controller = Controller.from_dict(settings.controller)
+        controller_config = dict(settings.controller)
 
         trigger_runtime.send(settings.triggers.get("exp_onset"))
 
@@ -199,7 +114,16 @@ def run(options: TaskRunOptions):
                     window=win,
                     keyboard=kb,
                 )
-                .generate_conditions()
+                .generate_conditions(
+                    func=generate_task_switching_conditions,
+                    switch_probability=controller_config.get("switch_probability", 0.5),
+                    digit_pool=controller_config.get("digit_pool", [1, 2, 3, 4, 6, 7, 8, 9]),
+                    fixation_duration=settings.fixation_duration,
+                    iti_duration=settings.iti_duration,
+                    random_seed=controller_config.get("random_seed", None),
+                    seed_offset=block_i,
+                    enable_logging=bool(controller_config.get("enable_logging", True)),
+                )
                 .on_start(lambda b: trigger_runtime.send(settings.triggers.get("block_onset")))
                 .on_end(lambda b: trigger_runtime.send(settings.triggers.get("block_end")))
                 .run_trial(
@@ -215,7 +139,8 @@ def run(options: TaskRunOptions):
                 .to_dict(all_data)
             )
 
-            block_summary = _summarize_trials(block.get_all_data(), fallback_score=int(controller.current_score))
+            normalize_generated_condition_rows(block.get_all_data())
+            block_summary = summarize_trials(block.get_all_data(), fallback_score=int(controller.current_score))
             if block_i < (total_blocks - 1):
                 StimUnit("block", win, kb, runtime=trigger_runtime).add_stim(
                     stim_bank.get_and_format(
@@ -233,7 +158,7 @@ def run(options: TaskRunOptions):
                     )
                 ).wait_and_continue()
 
-        overall = _summarize_trials(all_data, fallback_score=int(controller.current_score))
+        overall = summarize_trials(all_data, fallback_score=int(controller.current_score))
         StimUnit("goodbye", win, kb, runtime=trigger_runtime).add_stim(
             stim_bank.get_and_format(
                 "good_bye",

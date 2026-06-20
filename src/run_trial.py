@@ -3,35 +3,62 @@ from __future__ import annotations
 from functools import partial
 from typing import Any
 
-from psyflow import StimUnit, set_trial_context
-
-
-def _deadline_s(value: Any) -> float | None:
-    if isinstance(value, (int, float)):
-        return float(value)
-    if isinstance(value, (list, tuple)) and value:
-        try:
-            return float(max(value))
-        except Exception:
-            return None
-    return None
-
-
-def _as_duration(controller, value: Any, default_value: float) -> float:
-    if hasattr(controller, "sample_duration"):
-        return float(controller.sample_duration(value, default_value))
-    if isinstance(value, (int, float)):
-        return float(value)
-    if isinstance(value, (list, tuple)) and value:
-        try:
-            return float(max(value))
-        except Exception:
-            return float(default_value)
-    return float(default_value)
+from psyflow import StimUnit, next_trial_id, resolve_deadline, set_trial_context
 
 
 def _as_dict(value: Any) -> dict:
     return value if isinstance(value, dict) else {}
+
+
+def _parse_condition(condition: Any) -> dict[str, Any]:
+    if isinstance(condition, (list, tuple)) and len(condition) >= 9:
+        (
+            condition_name,
+            condition_id,
+            trial_index,
+            task_rule,
+            trial_type,
+            target_digit,
+            switch_trial,
+            fixation_duration,
+            iti_duration,
+            *_,
+        ) = condition
+        return {
+            "condition": str(condition_name).strip().lower(),
+            "condition_id": str(condition_id),
+            "trial_index": int(trial_index),
+            "task_rule": str(task_rule).strip().lower(),
+            "trial_type": str(trial_type).strip().lower(),
+            "target_digit": int(target_digit),
+            "switch_trial": bool(switch_trial),
+            "fixation_duration": fixation_duration,
+            "iti_duration": iti_duration,
+        }
+    if isinstance(condition, dict):
+        condition_name = str(condition.get("condition", "cued_switching")).strip().lower()
+        return {
+            "condition": condition_name,
+            "condition_id": str(condition.get("condition_id", condition_name)),
+            "trial_index": int(condition.get("trial_index", 1)),
+            "task_rule": str(condition.get("task_rule", "parity")).strip().lower(),
+            "trial_type": str(condition.get("trial_type", "repeat")).strip().lower(),
+            "target_digit": int(condition.get("target_digit", condition.get("digit", 1))),
+            "switch_trial": bool(condition.get("switch_trial", False)),
+            "fixation_duration": condition.get("fixation_duration", None),
+            "iti_duration": condition.get("iti_duration", None),
+        }
+    return {
+        "condition": str(condition).strip().lower(),
+        "condition_id": str(condition).strip().lower(),
+        "trial_index": 1,
+        "task_rule": "parity",
+        "trial_type": "start",
+        "target_digit": 1,
+        "switch_trial": False,
+        "fixation_duration": None,
+        "iti_duration": None,
+    }
 
 
 def _rule_profile(task_rule: str, target_digit: int, left_key: str, right_key: str, settings) -> dict[str, Any]:
@@ -79,14 +106,15 @@ def run_trial(
     block_idx=None,
 ):
     """Run one cue-based task-switching trial."""
-    condition_name = str(condition).strip().lower()
-    trial_id = int(controller.next_trial_id()) if hasattr(controller, "next_trial_id") else 1
+    parsed = _parse_condition(condition)
+    condition_name = parsed["condition"]
+    trial_id = next_trial_id()
+    trial_index = int(parsed["trial_index"]) if int(parsed["trial_index"]) > 0 else int(trial_id)
     block_idx_val = int(block_idx) if block_idx is not None else 0
 
-    trial_spec = controller.build_trial()
-    task_rule = str(trial_spec.get("task_rule", "parity")).strip().lower()
-    trial_type = str(trial_spec.get("trial_type", "repeat")).strip().lower()
-    target_digit = int(trial_spec.get("digit", 1))
+    task_rule = str(parsed["task_rule"]).strip().lower()
+    trial_type = str(parsed["trial_type"]).strip().lower()
+    target_digit = int(parsed["target_digit"])
 
     left_key = str(getattr(settings, "left_key", "f")).strip().lower()
     right_key = str(getattr(settings, "right_key", "j")).strip().lower()
@@ -97,23 +125,33 @@ def run_trial(
 
     profile = _rule_profile(task_rule, target_digit, left_key, right_key, settings)
 
-    fixation_duration = _as_duration(controller, settings.fixation_duration, 0.45)
+    fixation_duration = (
+        float(parsed["fixation_duration"])
+        if parsed["fixation_duration"] is not None
+        else float(resolve_deadline(settings.fixation_duration) or 0.45)
+    )
     cue_duration = float(settings.cue_duration)
     decision_deadline = float(settings.decision_deadline)
     feedback_duration = float(settings.feedback_duration)
-    iti_duration = _as_duration(controller, settings.iti_duration, 0.45)
+    iti_duration = (
+        float(parsed["iti_duration"])
+        if parsed["iti_duration"] is not None
+        else float(resolve_deadline(settings.iti_duration) or 0.45)
+    )
 
     current_score = int(getattr(controller, "current_score", 0))
     trial_data = {
         "condition": condition_name,
         "trial_id": trial_id,
+        "scheduled_trial_index": trial_index,
         "block_id": str(block_id) if block_id is not None else "block_0",
         "block_idx": block_idx_val,
+        "condition_id": parsed["condition_id"],
         "task_rule": profile["rule"],
         "trial_type": trial_type,
         "trial_type_cn": trial_type_label,
         "target_digit": target_digit,
-        "switch_trial": bool(trial_spec.get("switch_trial", trial_type == "switch")),
+        "switch_trial": bool(parsed["switch_trial"]),
         "left_key": left_key,
         "right_key": right_key,
         "left_label_cn": profile["left_label"],
@@ -128,10 +166,10 @@ def run_trial(
         fixation,
         trial_id=trial_id,
         phase="fixation",
-        deadline_s=_deadline_s(fixation_duration),
+        deadline_s=resolve_deadline(fixation_duration),
         valid_keys=[],
         block_id=trial_data["block_id"],
-        condition_id=condition_name,
+        condition_id=parsed["condition_id"],
         task_factors={
             "stage": "fixation",
             "task_rule": profile["rule"],
@@ -156,10 +194,10 @@ def run_trial(
         cue,
         trial_id=trial_id,
         phase="cue",
-        deadline_s=_deadline_s(cue_duration),
+        deadline_s=resolve_deadline(cue_duration),
         valid_keys=[],
         block_id=trial_data["block_id"],
-        condition_id=condition_name,
+        condition_id=parsed["condition_id"],
         task_factors={
             "stage": "cue",
             "task_rule": profile["rule"],
@@ -193,10 +231,10 @@ def run_trial(
         decision,
         trial_id=trial_id,
         phase="decision",
-        deadline_s=_deadline_s(decision_deadline),
+        deadline_s=resolve_deadline(decision_deadline),
         valid_keys=response_keys,
         block_id=trial_data["block_id"],
-        condition_id=condition_name,
+        condition_id=parsed["condition_id"],
         task_factors={
             "stage": "decision",
             "task_rule": profile["rule"],
@@ -214,17 +252,16 @@ def run_trial(
         keys=response_keys,
         duration=decision_deadline,
         onset_trigger=settings.triggers.get("decision_onset"),
-        response_trigger=None,
+        response_trigger={
+            left_key: settings.triggers.get("choice_left"),
+            right_key: settings.triggers.get("choice_right"),
+        },
         timeout_trigger=settings.triggers.get("choice_timeout"),
     )
     decision.to_dict(trial_data)
 
     response_key = str(decision.get_state("response", "")).strip().lower()
     timed_out = response_key not in response_keys
-    if response_key == left_key:
-        trigger_runtime.send(settings.triggers.get("choice_left"))
-    elif response_key == right_key:
-        trigger_runtime.send(settings.triggers.get("choice_right"))
 
     is_correct: bool | None = None if timed_out else (response_key == profile["correct_key"])
     score_update = controller.apply_score(is_correct)
@@ -262,10 +299,10 @@ def run_trial(
         feedback,
         trial_id=trial_id,
         phase="feedback",
-        deadline_s=_deadline_s(feedback_duration),
+        deadline_s=resolve_deadline(feedback_duration),
         valid_keys=[],
         block_id=trial_data["block_id"],
-        condition_id=condition_name,
+        condition_id=parsed["condition_id"],
         task_factors={
             "stage": "feedback",
             "task_rule": profile["rule"],
@@ -289,10 +326,10 @@ def run_trial(
         iti,
         trial_id=trial_id,
         phase="inter_trial_interval",
-        deadline_s=_deadline_s(iti_duration),
+        deadline_s=resolve_deadline(iti_duration),
         valid_keys=[],
         block_id=trial_data["block_id"],
-        condition_id=condition_name,
+        condition_id=parsed["condition_id"],
         task_factors={"stage": "inter_trial_interval", "block_idx": block_idx_val},
         stim_id="fixation",
     )
